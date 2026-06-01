@@ -5,52 +5,45 @@ document.addEventListener("DOMContentLoaded", () => {
     const changeLanguageBtn = document.getElementById("changeLanguageBtn");
     const translatableElements = document.querySelectorAll("[data-es][data-en]");
 
-    const changeText = (language) => {
+    function translatePage(language) {
         translatableElements.forEach((element) => {
-            const translatedText = element.dataset[language];
+            const text = element.getAttribute(`data-${language}`);
 
-            if (translatedText) {
-                element.textContent = translatedText;
+            if (text) {
+                element.textContent = text;
             }
         });
 
         document.documentElement.lang = language;
-    };
+    }
 
-    const showPortfolio = (language) => {
-        changeText(language);
+    function openPortfolio(language) {
+        translatePage(language);
 
-        languageScreen.classList.add("fade-out");
+        languageScreen.classList.add("hidden");
+        portfolio.classList.remove("hidden");
 
-        setTimeout(() => {
-            languageScreen.classList.add("hidden");
-            languageScreen.classList.remove("fade-out");
+        window.scrollTo(0, 0);
+    }
 
-            portfolio.classList.remove("hidden");
-            window.scrollTo(0, 0);
-        }, 250);
-    };
-
-    const showLanguageScreen = () => {
+    function openLanguageScreen() {
         portfolio.classList.add("hidden");
         languageScreen.classList.remove("hidden");
 
         window.scrollTo(0, 0);
-    };
+    }
 
     languageButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            const selectedLanguage = button.dataset.language;
+            const selectedLanguage = button.getAttribute("data-language");
 
-            if (!selectedLanguage) {
-                return;
+            if (selectedLanguage) {
+                openPortfolio(selectedLanguage);
             }
-
-            showPortfolio(selectedLanguage);
         });
     });
 
     if (changeLanguageBtn) {
-        changeLanguageBtn.addEventListener("click", showLanguageScreen);
+        changeLanguageBtn.addEventListener("click", openLanguageScreen);
     }
 });

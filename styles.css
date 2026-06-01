@@ -1,11 +1,9 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* GENERAL */
 html {
     scroll-behavior: smooth;
 }
@@ -28,15 +26,9 @@ body {
 .language-screen {
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     padding: 24px;
-    animation: fadeIn 0.35s ease;
-}
-
-.language-screen.fade-out {
-    animation: fadeOut 0.25s ease forwards;
 }
 
 .language-card {
@@ -49,6 +41,7 @@ body {
     border-radius: 28px;
     box-shadow: 0 0 42px rgba(124, 124, 255, 0.16);
     backdrop-filter: blur(14px);
+    animation: fadeIn 0.35s ease;
 }
 
 .language-label {
@@ -92,7 +85,7 @@ body {
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .language-btn:hover {
@@ -104,17 +97,16 @@ body {
     transform: scale(0.98);
 }
 
-/* CONTAINER */
+/* PORTFOLIO */
 .container {
     width: 90%;
     max-width: 1060px;
     margin: auto;
     text-align: center;
     padding: 26px 0 64px;
-    animation: pageEnter 0.45s ease;
+    animation: fadeIn 0.4s ease;
 }
 
-/* HERO */
 .hero {
     min-height: 82vh;
     display: flex;
@@ -165,7 +157,6 @@ h1 {
     margin-bottom: 38px;
 }
 
-/* BUTTONS */
 .botones-principales {
     display: flex;
     justify-content: center;
@@ -196,11 +187,6 @@ h1 {
     box-shadow: 0 0 30px rgba(124, 124, 255, 0.60);
 }
 
-.btn:active,
-.btn-contacto:active {
-    transform: scale(0.98);
-}
-
 .btn-secundario {
     background: rgba(255, 255, 255, 0.035);
     border: 1px solid rgba(124, 124, 255, 0.65);
@@ -211,7 +197,6 @@ h1 {
     background: rgba(124, 124, 255, 0.14);
 }
 
-/* CHANGE LANGUAGE */
 .change-language {
     margin-top: 18px;
     background: transparent;
@@ -227,7 +212,6 @@ h1 {
     color: white;
 }
 
-/* SECTIONS */
 .seccion {
     margin-top: 68px;
     padding-top: 46px;
@@ -257,7 +241,6 @@ h1 {
     box-shadow: 0 0 16px rgba(124, 124, 255, 0.42);
 }
 
-/* SKILLS */
 .skills {
     display: flex;
     justify-content: center;
@@ -280,10 +263,8 @@ h1 {
 .skills span:hover {
     transform: translateY(-3px);
     background: rgba(124, 124, 255, 0.25);
-    box-shadow: 0 0 18px rgba(124, 124, 255, 0.18);
 }
 
-/* PROJECTS */
 .proyectos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -303,28 +284,10 @@ h1 {
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.20);
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(124, 124, 255, 0.14), transparent 45%);
-    opacity: 0;
-    transition: opacity 0.25s ease;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
 .card:hover {
     transform: translateY(-8px);
     border-color: rgba(124, 124, 255, 0.65);
     box-shadow: 0 0 36px rgba(124, 124, 255, 0.19);
-}
-
-.card > * {
-    position: relative;
-    z-index: 1;
 }
 
 .destacado {
@@ -382,12 +345,6 @@ h1 {
     color: white;
 }
 
-.card-link.disabled {
-    color: #737991;
-    cursor: default;
-}
-
-/* CONTACT */
 .contacto-section {
     padding-bottom: 28px;
 }
@@ -406,7 +363,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* STATUS BANNER */
 .status-banner {
     display: inline-flex;
     align-items: center;
@@ -424,7 +380,6 @@ h1 {
     margin: 0;
     font-size: 15px;
     color: #d1fae5;
-    line-height: 1.4;
 }
 
 .status-dot {
@@ -435,7 +390,6 @@ h1 {
     box-shadow: 0 0 14px rgba(34, 197, 94, 0.9);
 }
 
-/* ANIMATIONS */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -448,26 +402,6 @@ h1 {
     }
 }
 
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-}
-
-@keyframes pageEnter {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* TABLET */
 @media (max-width: 900px) {
     .hero {
         min-height: auto;
@@ -491,7 +425,6 @@ h1 {
     }
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
     .container {
         width: 92%;
@@ -500,14 +433,6 @@ h1 {
 
     .language-card {
         padding: 36px 24px;
-    }
-
-    .language-label {
-        letter-spacing: 4px;
-    }
-
-    .language-subtitle {
-        font-size: 16px;
     }
 
     .language-buttons {
@@ -520,10 +445,6 @@ h1 {
         max-width: 260px;
     }
 
-    .hero {
-        padding-top: 36px;
-    }
-
     .saludo {
         font-size: 14px;
         letter-spacing: 6px;
@@ -531,7 +452,6 @@ h1 {
 
     .presentacion {
         font-size: 22px;
-        margin-bottom: 28px;
     }
 
     .rol {
@@ -540,11 +460,6 @@ h1 {
 
     .descripcion {
         font-size: 16px;
-    }
-
-    .seccion {
-        margin-top: 60px;
-        padding-top: 40px;
     }
 
     .seccion h2 {
@@ -569,9 +484,5 @@ h1 {
         max-width: 360px;
         border-radius: 20px;
         padding: 13px 17px;
-    }
-
-    .status-banner p {
-        font-size: 14px;
     }
 }
