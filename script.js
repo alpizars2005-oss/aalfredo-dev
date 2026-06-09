@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const languageButtons = document.querySelectorAll(".language-btn");
     const changeLanguageBtn = document.getElementById("changeLanguageBtn");
     const translatableElements = document.querySelectorAll("[data-es][data-en]");
+    const downloadCvBtn = document.getElementById("downloadCvBtn");
+
+    function updateCvDownload(language) {
+        if (!downloadCvBtn) return;
+
+        if (language === "en") {
+            downloadCvBtn.href = "assets/PDFs/cv-english.pdf";
+            downloadCvBtn.download = "Angel-Alpizar-CV-English.pdf";
+            downloadCvBtn.textContent = "Download CV";
+        } else {
+            downloadCvBtn.href = "assets/PDFs/cv-espanol.pdf";
+            downloadCvBtn.download = "Angel-Alpizar-CV-Espanol.pdf";
+            downloadCvBtn.textContent = "Descargar CV";
+        }
+    }
 
     function translatePage(language) {
         translatableElements.forEach((element) => {
@@ -14,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
+        updateCvDownload(language);
         document.documentElement.lang = language;
     }
 

@@ -165,9 +165,13 @@ h1 {
     margin-bottom: 24px;
 }
 
+/* GENERAL BUTTONS */
 .btn,
-.btn-contacto {
-    display: inline-block;
+.btn-contacto,
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(135deg, #7c7cff, #8b5cf6);
     color: white;
     text-decoration: none;
@@ -177,16 +181,28 @@ h1 {
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
     box-shadow: 0 0 20px rgba(124, 124, 255, 0.20);
 }
 
 .btn:hover,
-.btn-contacto:hover {
+.btn-contacto:hover,
+.btn-contact:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 0 30px rgba(124, 124, 255, 0.60);
 }
 
+.btn:active,
+.btn-contacto:active,
+.btn-contact:active {
+    transform: scale(0.98);
+}
+
+/* SECONDARY BUTTON */
 .btn-secundario {
     background: rgba(255, 255, 255, 0.035);
     border: 1px solid rgba(124, 124, 255, 0.65);
@@ -195,6 +211,19 @@ h1 {
 
 .btn-secundario:hover {
     background: rgba(124, 124, 255, 0.14);
+}
+
+/* CV DOWNLOAD BUTTON */
+.btn-cv {
+    background: linear-gradient(135deg, #22c55e, #14b8a6);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 0 22px rgba(20, 184, 166, 0.25);
+}
+
+.btn-cv:hover {
+    background: linear-gradient(135deg, #34d399, #2dd4bf);
+    box-shadow: 0 0 34px rgba(20, 184, 166, 0.45);
 }
 
 .change-language {
@@ -402,6 +431,7 @@ h1 {
     }
 }
 
+/* TABLET */
 @media (max-width: 900px) {
     .hero {
         min-height: auto;
@@ -425,6 +455,7 @@ h1 {
     }
 }
 
+/* MOBILE */
 @media (max-width: 600px) {
     .container {
         width: 92%;
@@ -467,7 +498,8 @@ h1 {
     }
 
     .btn,
-    .btn-contacto {
+    .btn-contacto,
+    .btn-contact {
         width: 100%;
         max-width: 285px;
         padding: 15px 24px;
