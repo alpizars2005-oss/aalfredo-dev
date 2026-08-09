@@ -3,277 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel Alfredo | Portfolio</title>
+    <meta name="theme-color" content="#06080d">
+    <meta name="description" content="Portfolio de Angel Alfredo Alpizar: sistemas, desarrollo, automatización, Linux y ciberseguridad.">
+    <title>Angel Alfredo | Systems Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-    <!-- LANGUAGE SCREEN -->
-    <section class="language-screen" id="languageScreen">
-        <div class="language-card">
-            <p class="language-label">WELCOME / BIENVENIDO</p>
+    <!-- LANGUAGE / BOOT SCREEN -->
+    <section class="language-screen" id="languageScreen" aria-label="Language selection">
+        <div class="boot-shell">
+            <div class="boot-topline">
+                <span>ALPIZAR_OS</span>
+                <span>BOOT / 01</span>
+            </div>
 
-            <h1 class="language-title">Choose your language</h1>
+            <div class="boot-copy">
+                <p class="eyebrow">SYSTEM / INITIALIZING</p>
+                <h1>Choose your<br><span>interface.</span></h1>
+                <p class="boot-description">Select a language to initialize the portfolio environment.</p>
+            </div>
 
-            <p class="language-subtitle">
-                Selecciona el idioma para ver mi portafolio
-            </p>
+            <div class="boot-log" aria-hidden="true">
+                <span>&gt; loading profile.data</span>
+                <span>&gt; mounting projects.db</span>
+                <span>&gt; interface ready_</span>
+            </div>
 
             <div class="language-buttons">
                 <button class="language-btn" type="button" data-language="en">
-                    English
+                    <span class="button-index">01</span>
+                    <span>English</span>
+                    <span class="button-arrow">↗</span>
                 </button>
-
                 <button class="language-btn" type="button" data-language="es">
-                    Español
+                    <span class="button-index">02</span>
+                    <span>Español</span>
+                    <span class="button-arrow">↗</span>
                 </button>
             </div>
         </div>
     </section>
 
     <!-- PORTFOLIO -->
-    <main class="container hidden" id="portfolio">
+    <div class="portfolio-shell hidden" id="portfolio">
+        <header class="topbar">
+            <a class="brand" href="#top" aria-label="Back to top">
+                <span class="brand-mark">AA</span>
+                <span class="brand-copy">
+                    <strong>ALPIZAR</strong>
+                    <small>SYSTEMS / PORTFOLIO</small>
+                </span>
+            </a>
 
-        <!-- HERO -->
-        <section class="hero">
-            <p class="saludo" data-es="¡SALUDOS!" data-en="GREETINGS!">
-                ¡SALUDOS!
-            </p>
-
-            <h2 class="presentacion" data-es="Me presento, soy:" data-en="Let me introduce myself:">
-                Me presento, soy:
-            </h2>
-
-            <h1>Angel Alfredo</h1>
-
-            <p class="rol" data-es="Desarrollador Full Stack en formación" data-en="Aspiring Full Stack Developer">
-                Desarrollador Full Stack en formación
-            </p>
-
-            <p
-                class="descripcion"
-                data-es="Estudiante de Ingeniería en Sistemas Computacionales, apasionado por el desarrollo web, Linux, Python, servidores y ciberseguridad."
-                data-en="Computer Systems Engineering student passionate about web development, Linux, Python, servers, and cybersecurity."
-            >
-                Estudiante de Ingeniería en Sistemas Computacionales, apasionado por el desarrollo web, Linux, Python, servidores y ciberseguridad.
-            </p>
-
-            <div class="botones-principales">
-                <a href="https://github.com/alpizars2005-oss" target="_blank" class="btn btn-secundario">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/in/angel-alfredo-alpizar-sanchez-6559a4278" target="_blank" class="btn btn-secundario">
-                    LinkedIn
-                </a>
-            </div>
-
-            <div class="status-banner hero-status">
-                <span class="status-dot"></span>
-                <p data-es="Disponible para trabajar" data-en="Available for work">
-                    Disponible para trabajar
-                </p>
-            </div>
-
-            <button class="change-language" type="button" id="changeLanguageBtn" data-es="Cambiar idioma" data-en="Change language">
-                Cambiar idioma
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                MENU
             </button>
-        </section>
 
-        <!-- SKILLS -->
-        <section class="seccion">
-            <p class="section-label" data-es="Tecnologías" data-en="Technologies">
-                Tecnologías
-            </p>
+            <nav class="nav-links" id="navLinks" aria-label="Portfolio navigation">
+                <a href="#profile" data-es="Perfil" data-en="Profile">Perfil</a>
+                <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#stack" data-es="Stack" data-en="Stack">Stack</a>
+                <a href="#lab" data-es="Lab" data-en="Lab">Lab</a>
+                <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+            </nav>
 
-            <h2 data-es="Habilidades" data-en="Skills">
-                Habilidades
-            </h2>
+            <button class="language-switch" type="button" id="changeLanguageBtn">ES / EN</button>
+        </header>
 
-            <div class="separador"></div>
-
-            <div class="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Python</span>
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Linux</span>
-                <span>VS Code</span>
-                <span>Node.js</span>
-                <span data-es="Soporte IT" data-en="IT Support">Soporte IT</span>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section class="seccion">
-            <p class="section-label" data-es="Trabajo reciente" data-en="Recent work">
-                Trabajo reciente
-            </p>
-
-            <h2 data-es="Mis Proyectos" data-en="My Projects">
-                Mis Proyectos
-            </h2>
-
-            <div class="separador"></div>
-
-            <div class="proyectos-grid">
-
-                <article class="card">
-                    <div class="card-header">
-                        <span class="card-icon">🍡</span>
-                        <h3>Mochi Mochi</h3>
+        <main id="top">
+            <!-- HERO -->
+            <section class="hero section-frame" aria-labelledby="heroTitle">
+                <div class="hero-main reveal">
+                    <div class="system-line">
+                        <span class="live-dot"></span>
+                        <span data-es="SISTEMA / EN LÍNEA" data-en="SYSTEM / ONLINE">SISTEMA / EN LÍNEA</span>
+                        <span class="line-spacer"></span>
+                        <span>MX / UTC-6</span>
                     </div>
 
-                    <p
-                        data-es="Aplicación web para mostrar un menú digital, recibir pedidos por WhatsApp y registrar ventas de un pequeño negocio de comida."
-                        data-en="Web application for displaying a digital menu, receiving WhatsApp orders, and tracking sales for a small food business."
-                    >
-                        Aplicación web para mostrar un menú digital, recibir pedidos por WhatsApp y registrar ventas de un pequeño negocio de comida.
+                    <p class="sequence">00 / ENTRY POINT</p>
+                    <h1 id="heroTitle" class="hero-title">
+                        <span>ANGEL</span>
+                        <span class="outline-text">ALFREDO</span>
+                        <span>ALPIZAR</span>
+                    </h1>
+
+                    <div class="hero-summary">
+                        <p class="hero-role" data-es="Ingeniería en Sistemas · Desarrollo · Automatización" data-en="Systems Engineering · Development · Automation">
+                            Ingeniería en Sistemas · Desarrollo · Automatización
+                        </p>
+                        <p class="hero-description"
+                           data-es="Construyo herramientas, automatizo procesos y sigo profundizando en Linux, infraestructura y ciberseguridad. Me interesa entender cómo funciona un sistema completo, no solamente su interfaz."
+                           data-en="I build tools, automate workflows, and keep going deeper into Linux, infrastructure, and cybersecurity. I care about understanding the whole system, not only its interface.">
+                            Construyo herramientas, automatizo procesos y sigo profundizando en Linux, infraestructura y ciberseguridad. Me interesa entender cómo funciona un sistema completo, no solamente su interfaz.
+                        </p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a class="action-link primary-action" href="#projects">
+                            <span data-es="Explorar proyectos" data-en="Explore projects">Explorar proyectos</span>
+                            <span>↓</span>
+                        </a>
+                        <a class="action-link" href="https://github.com/alpizars2005-oss" target="_blank" rel="noreferrer">
+                            <span>GitHub</span><span>↗</span>
+                        </a>
+                        <a class="action-link" href="https://www.linkedin.com/in/angel-alfredo-alpizar-sanchez-6559a4278" target="_blank" rel="noreferrer">
+                            <span>LinkedIn</span><span>↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="hero-console reveal" aria-label="System profile">
+                    <div class="console-header">
+                        <span>PROFILE.DATA</span>
+                        <span class="console-status">LIVE</span>
+                    </div>
+                    <div class="console-body">
+                        <div class="console-row">
+                            <span class="console-key">ROLE</span>
+                            <span data-es="Estudiante de Sistemas" data-en="Systems Engineering Student">Estudiante de Sistemas</span>
+                        </div>
+                        <div class="console-row">
+                            <span class="console-key">FOCUS</span>
+                            <span>Software / IT / Cyber</span>
+                        </div>
+                        <div class="console-row">
+                            <span class="console-key">LANG</span>
+                            <span>ES / EN</span>
+                        </div>
+                        <div class="console-row">
+                            <span class="console-key">MODE</span>
+                            <span data-es="Construyendo" data-en="Building">Construyendo</span>
+                        </div>
+                    </div>
+                    <div class="console-command">
+                        <span>aalfredo@portfolio:~$</span>
+                        <span class="terminal-command" data-es="./build_next.sh" data-en="./build_next.sh">./build_next.sh</span>
+                        <span class="terminal-cursor">_</span>
+                    </div>
+                </aside>
+
+                <div class="scroll-marker" aria-hidden="true">
+                    <span>SCROLL</span>
+                    <div></div>
+                </div>
+            </section>
+
+            <!-- PROFILE -->
+            <section class="content-section section-frame" id="profile">
+                <div class="section-heading reveal">
+                    <p class="sequence">01 / PROFILE</p>
+                    <h2 data-es="Pensar como sistema." data-en="Think in systems.">Pensar como sistema.</h2>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="profile-statement reveal">
+                        <p data-es="Mi objetivo no es coleccionar tecnologías. Es aprender a conectar software, sistemas, infraestructura y seguridad para resolver problemas reales."
+                           data-en="My goal is not to collect technologies. It is to learn how software, systems, infrastructure, and security connect to solve real problems.">
+                            Mi objetivo no es coleccionar tecnologías. Es aprender a conectar software, sistemas, infraestructura y seguridad para resolver problemas reales.
+                        </p>
+                    </div>
+
+                    <div class="profile-data reveal">
+                        <article>
+                            <span>01</span>
+                            <h3 data-es="Construir" data-en="Build">Construir</h3>
+                            <p data-es="Aplicaciones y herramientas con una razón clara de existir." data-en="Applications and tools with a clear reason to exist.">Aplicaciones y herramientas con una razón clara de existir.</p>
+                        </article>
+                        <article>
+                            <span>02</span>
+                            <h3 data-es="Automatizar" data-en="Automate">Automatizar</h3>
+                            <p data-es="Convertir tareas repetitivas en flujos controlables y verificables." data-en="Turn repetitive work into controllable, verifiable workflows.">Convertir tareas repetitivas en flujos controlables y verificables.</p>
+                        </article>
+                        <article>
+                            <span>03</span>
+                            <h3 data-es="Entender" data-en="Understand">Entender</h3>
+                            <p data-es="Ir debajo de la UI: Linux, redes, datos, procesos y seguridad." data-en="Go below the UI: Linux, networking, data, processes, and security.">Ir debajo de la UI: Linux, redes, datos, procesos y seguridad.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="content-section section-frame" id="projects">
+                <div class="section-heading reveal">
+                    <p class="sequence">02 / PROJECT DATABASE</p>
+                    <h2 data-es="Trabajo seleccionado." data-en="Selected work.">Trabajo seleccionado.</h2>
+                    <p class="section-intro" data-es="Proyectos que muestran cómo estoy convirtiendo aprendizaje técnico en software que se puede usar, probar y mantener." data-en="Projects that show how I am turning technical learning into software that can be used, tested, and maintained.">
+                        Proyectos que muestran cómo estoy convirtiendo aprendizaje técnico en software que se puede usar, probar y mantener.
                     </p>
+                </div>
 
-                    <div class="tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                <div class="project-list">
+                    <article class="project-row reveal">
+                        <div class="project-index">P.001</div>
+                        <div class="project-copy">
+                            <div class="project-meta">
+                                <span>PYTHON / DESKTOP / JSON</span>
+                                <span class="project-status"><i></i> ACTIVE</span>
+                            </div>
+                            <h3>Macro Recorder JSON</h3>
+                            <p data-es="Aplicación local para Windows y Linux que graba y reproduce acciones de teclado y mouse, guarda macros legibles en JSON e incorpora validación, controles de seguridad y automatización configurable."
+                               data-en="Local Windows and Linux application that records and replays keyboard and mouse actions, stores readable JSON macros, and includes validation, safety controls, and configurable automation.">
+                                Aplicación local para Windows y Linux que graba y reproduce acciones de teclado y mouse, guarda macros legibles en JSON e incorpora validación, controles de seguridad y automatización configurable.
+                            </p>
+                            <div class="project-tags"><span>Python</span><span>Tkinter</span><span>Automation</span><span>Linux</span></div>
+                        </div>
+                        <a class="project-link" href="https://github.com/alpizars2005-oss/Macro-Recorder-JSON" target="_blank" rel="noreferrer" aria-label="Open Macro Recorder JSON on GitHub">↗</a>
+                    </article>
+
+                    <article class="project-row reveal">
+                        <div class="project-index">P.002</div>
+                        <div class="project-copy">
+                            <div class="project-meta">
+                                <span>PYTHON / SQLITE / WORKFLOW</span>
+                                <span class="project-status"><i></i> ACTIVE</span>
+                            </div>
+                            <h3>Job Search Assistant</h3>
+                            <p data-es="Workspace bilingüe y orientado a privacidad para evaluar vacantes, organizar aplicaciones, detectar señales de riesgo y exportar información sin depender de una API de pago."
+                               data-en="Privacy-first bilingual workspace for evaluating job postings, tracking applications, detecting risk signals, and exporting data without requiring a paid API.">
+                                Workspace bilingüe y orientado a privacidad para evaluar vacantes, organizar aplicaciones, detectar señales de riesgo y exportar información sin depender de una API de pago.
+                            </p>
+                            <div class="project-tags"><span>Python</span><span>SQLite</span><span>CLI + GUI</span><span>Testing</span></div>
+                        </div>
+                        <a class="project-link" href="https://github.com/alpizars2005-oss/job-search-mx-assistant" target="_blank" rel="noreferrer" aria-label="Open Job Search Assistant on GitHub">↗</a>
+                    </article>
+
+                    <article class="project-row reveal">
+                        <div class="project-index">P.003</div>
+                        <div class="project-copy">
+                            <div class="project-meta">
+                                <span>WEB / BUSINESS</span>
+                                <span class="project-status"><i></i> SHIPPED</span>
+                            </div>
+                            <h3>Mochi Mochi</h3>
+                            <p data-es="Experimento de producto web para un pequeño negocio de comida: menú digital, experiencia móvil y flujo de contacto orientado a pedidos."
+                               data-en="Web product experiment for a small food business: digital menu, mobile experience, and an order-oriented contact flow.">
+                                Experimento de producto web para un pequeño negocio de comida: menú digital, experiencia móvil y flujo de contacto orientado a pedidos.
+                            </p>
+                            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UX</span></div>
+                        </div>
+                        <a class="project-link" href="https://github.com/alpizars2005-oss/Mochi-Mochi" target="_blank" rel="noreferrer" aria-label="Open Mochi Mochi on GitHub">↗</a>
+                    </article>
+
+                    <article class="project-row reveal">
+                        <div class="project-index">P.004</div>
+                        <div class="project-copy">
+                            <div class="project-meta">
+                                <span>LEARNING / PYTHON</span>
+                                <span class="project-status muted"><i></i> EVOLVING</span>
+                            </div>
+                            <h3>UCAMP Projects</h3>
+                            <p data-es="Repositorio de ejercicios y proyectos de formación que documenta mi progreso con Python, lógica, validación de datos, archivos y desarrollo incremental."
+                               data-en="Training repository documenting my progress with Python, logic, data validation, files, and incremental development.">
+                                Repositorio de ejercicios y proyectos de formación que documenta mi progreso con Python, lógica, validación de datos, archivos y desarrollo incremental.
+                            </p>
+                            <div class="project-tags"><span>Python</span><span>Git</span><span>Learning</span></div>
+                        </div>
+                        <a class="project-link" href="https://github.com/alpizars2005-oss/Ucamp-Projects" target="_blank" rel="noreferrer" aria-label="Open UCAMP Projects on GitHub">↗</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PROCESS -->
+            <section class="content-section section-frame process-section">
+                <div class="section-heading reveal">
+                    <p class="sequence">03 / ENGINEERING LOOP</p>
+                    <h2 data-es="Analizar. Construir. Mejorar." data-en="Analyze. Build. Improve.">Analizar. Construir. Mejorar.</h2>
+                </div>
+
+                <div class="process-track reveal">
+                    <div class="process-step"><span>01</span><strong data-es="IDENTIFICAR" data-en="IDENTIFY">IDENTIFICAR</strong><small data-es="Problema y restricciones" data-en="Problem and constraints">Problema y restricciones</small></div>
+                    <div class="process-step"><span>02</span><strong data-es="DISEÑAR" data-en="DESIGN">DISEÑAR</strong><small data-es="Flujo y arquitectura" data-en="Flow and architecture">Flujo y arquitectura</small></div>
+                    <div class="process-step"><span>03</span><strong data-es="CONSTRUIR" data-en="BUILD">CONSTRUIR</strong><small data-es="Código y herramientas" data-en="Code and tools">Código y herramientas</small></div>
+                    <div class="process-step"><span>04</span><strong data-es="VALIDAR" data-en="VALIDATE">VALIDAR</strong><small data-es="Pruebas y casos límite" data-en="Tests and edge cases">Pruebas y casos límite</small></div>
+                    <div class="process-step"><span>05</span><strong data-es="ITERAR" data-en="ITERATE">ITERAR</strong><small data-es="Medir y refinar" data-en="Measure and refine">Medir y refinar</small></div>
+                </div>
+            </section>
+
+            <!-- STACK -->
+            <section class="content-section section-frame" id="stack">
+                <div class="section-heading reveal">
+                    <p class="sequence">04 / CAPABILITIES</p>
+                    <h2 data-es="Stack en movimiento." data-en="A stack in motion.">Stack en movimiento.</h2>
+                </div>
+
+                <div class="capability-grid">
+                    <article class="capability-card reveal">
+                        <span class="capability-code">DEV</span>
+                        <h3 data-es="Desarrollo" data-en="Development">Desarrollo</h3>
+                        <div class="capability-list"><span>Python</span><span>JavaScript</span><span>HTML / CSS</span><span>Git / GitHub</span></div>
+                    </article>
+                    <article class="capability-card reveal">
+                        <span class="capability-code">SYS</span>
+                        <h3 data-es="Sistemas" data-en="Systems">Sistemas</h3>
+                        <div class="capability-list"><span>Linux</span><span>Windows</span><span>CLI</span><span>IT Support</span></div>
+                    </article>
+                    <article class="capability-card reveal">
+                        <span class="capability-code">AUT</span>
+                        <h3 data-es="Automatización" data-en="Automation">Automatización</h3>
+                        <div class="capability-list"><span>Python</span><span>JSON</span><span>Desktop workflows</span><span>Validation</span></div>
+                    </article>
+                    <article class="capability-card reveal accent-card">
+                        <span class="capability-code">NEXT</span>
+                        <h3 data-es="Profundizando" data-en="Going deeper">Profundizando</h3>
+                        <div class="capability-list"><span>Cybersecurity</span><span>Networking</span><span>Servers</span><span>Cloud</span></div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- LAB -->
+            <section class="content-section section-frame" id="lab">
+                <div class="section-heading reveal">
+                    <p class="sequence">05 / HOMELAB</p>
+                    <h2 data-es="Aprender construyendo infraestructura." data-en="Learn by building infrastructure.">Aprender construyendo infraestructura.</h2>
+                </div>
+
+                <div class="lab-layout">
+                    <div class="network-map reveal" aria-label="Homelab concept diagram">
+                        <div class="network-node root-node"><span>WAN</span><strong>INTERNET</strong></div>
+                        <div class="network-line vertical-line line-one"></div>
+                        <div class="network-node"><span>EDGE</span><strong>ROUTER / FIREWALL</strong></div>
+                        <div class="network-line vertical-line line-two"></div>
+                        <div class="network-split"></div>
+                        <div class="network-children">
+                            <div class="network-node"><span>NODE_A</span><strong>SERVER</strong><small>Linux / Services</small></div>
+                            <div class="network-node"><span>NODE_B</span><strong>WORKSTATION</strong><small>Dev / Test</small></div>
+                            <div class="network-node"><span>NODE_C</span><strong>CLIENTS</strong><small>LAN / Devices</small></div>
+                        </div>
                     </div>
 
-                    <a
-                        href="https://github.com/alpizars2005-oss/Mochi-Mochi"
-                        target="_blank"
-                        class="card-link"
-                        data-es="Ver proyecto →"
-                        data-en="View project →"
-                    >
-                        Ver proyecto →
-                    </a>
-                </article>
-
-                <article class="card destacado">
-                    <div class="card-header">
-                        <span class="card-icon">🌐</span>
-                        <h3 data-es="Portafolio Web" data-en="Web Portfolio">
-                            Portafolio Web
-                        </h3>
+                    <div class="lab-copy reveal">
+                        <div class="lab-state"><span></span><strong data-es="LAB / EN CONSTRUCCIÓN" data-en="LAB / BUILDING">LAB / EN CONSTRUCCIÓN</strong></div>
+                        <p data-es="Mi laboratorio es el espacio para practicar administración Linux, servicios de servidor, redes, virtualización y fundamentos de seguridad con infraestructura que puedo observar y romper sin miedo."
+                           data-en="My lab is the place to practice Linux administration, server services, networking, virtualization, and security fundamentals on infrastructure I can observe and safely break.">
+                            Mi laboratorio es el espacio para practicar administración Linux, servicios de servidor, redes, virtualización y fundamentos de seguridad con infraestructura que puedo observar y romper sin miedo.
+                        </p>
+                        <div class="lab-tags"><span>Linux</span><span>Networking</span><span>Virtualization</span><span>Services</span><span>Security</span></div>
                     </div>
+                </div>
+            </section>
 
-                    <p
-                        data-es="Sitio personal creado con HTML, CSS y JavaScript para mostrar mis proyectos, habilidades, contacto y crecimiento como desarrollador."
-                        data-en="Personal website built with HTML, CSS, and JavaScript to showcase my projects, skills, contact information, and growth as a developer."
-                    >
-                        Sitio personal creado con HTML, CSS y JavaScript para mostrar mis proyectos, habilidades, contacto y crecimiento como desarrollador.
+            <!-- CONTACT -->
+            <section class="contact-section section-frame" id="contact">
+                <div class="contact-top reveal">
+                    <p class="sequence">06 / FINAL SEQUENCE</p>
+                    <div class="contact-status"><span></span><span data-es="ABIERTO A OPORTUNIDADES" data-en="OPEN TO OPPORTUNITIES">ABIERTO A OPORTUNIDADES</span></div>
+                </div>
+
+                <div class="contact-main reveal">
+                    <h2 data-es="Construyamos el siguiente sistema." data-en="Let's build the next system.">Construyamos el siguiente sistema.</h2>
+                    <p data-es="Desarrollo, automatización, sistemas, soporte técnico y el camino hacia ciberseguridad." data-en="Development, automation, systems, technical support, and the path toward cybersecurity.">
+                        Desarrollo, automatización, sistemas, soporte técnico y el camino hacia ciberseguridad.
                     </p>
+                </div>
 
-                    <div class="tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
+                <div class="contact-actions reveal">
+                    <a href="mailto:alpizars2005@gmail.com"><span>Email</span><span>↗</span></a>
+                    <a href="https://www.linkedin.com/in/angel-alfredo-alpizar-sanchez-6559a4278" target="_blank" rel="noreferrer"><span>LinkedIn</span><span>↗</span></a>
+                    <a href="https://github.com/alpizars2005-oss" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a>
+                    <a id="downloadCvBtn" href="assets/PDFs/cv-espanol.pdf" download="Angel-Alpizar-CV-Espanol.pdf"><span data-es="Descargar CV" data-en="Download CV">Descargar CV</span><span>↓</span></a>
+                </div>
 
-                    <a
-                        href="https://alpizars2005-oss.github.io/aalfredo-dev/"
-                        target="_blank"
-                        class="card-link"
-                        data-es="Ver sitio web →"
-                        data-en="View website →"
-                    >
-                        Ver sitio web →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">
-                        <span class="card-icon">🎓</span>
-                        <h3 data-es="Proyectos UCAMP" data-en="UCAMP Projects">
-                            Proyectos UCAMP
-                        </h3>
-                    </div>
-
-                    <p
-                        data-es="Colección de proyectos, retos y ejercicios realizados durante mi formación en desarrollo de software en UCAMP."
-                        data-en="A collection of projects, challenges, and exercises completed during my software development training at UCAMP."
-                    >
-                        Colección de proyectos, retos y ejercicios realizados durante mi formación en desarrollo de software en UCAMP.
-                    </p>
-
-                    <div class="tags">
-                        <span>Python</span>
-                        <span>Git</span>
-                        <span data-es="Aprendizaje" data-en="Learning">Aprendizaje</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/alpizars2005-oss/Ucamp-Projects"
-                        target="_blank"
-                        class="card-link"
-                        data-es="Ver repositorio →"
-                        data-en="View repository →"
-                    >
-                        Ver repositorio →
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="seccion contacto-section">
-            <p class="section-label" data-es="Conectemos" data-en="Let's connect">
-                Conectemos
-            </p>
-
-            <h2 data-es="Contacto" data-en="Contact">
-                Contacto
-            </h2>
-
-            <div class="separador"></div>
-
-            <p
-                class="contacto-texto"
-                data-es="¿Quieres conocer más sobre mis proyectos o conectar conmigo?"
-                data-en="Want to learn more about my projects or connect with me?"
-            >
-                ¿Quieres conocer más sobre mis proyectos o conectar conmigo?
-            </p>
-
-            <div class="contacto">
-                <a href="mailto:alpizars2005@gmail.com" class="btn-contacto">
-                    Email
-                </a>
-
-                <a href="sms:+525586793522" class="btn-contacto">
-                    SMS
-                </a>
-
-                <a
-                    id="downloadCvBtn"
-                    href="assets/PDFs/cv-espanol.pdf"
-                    download="Angel-Alpizar-CV-Espanol.pdf"
-                    class="btn-contacto btn-cv"
-                    data-es="Descargar CV"
-                    data-en="Download CV"
-                >
-                    Descargar CV
-                </a>
-
-                <a href="https://wa.me/525586793522" target="_blank" class="btn-contacto">
-                    WhatsApp
-                </a>
-            </div>
-
-            <div class="status-banner">
-                <span class="status-dot"></span>
-                <p
-                    data-es="Abierto a oportunidades Full Stack, IT y soporte técnico bilingüe"
-                    data-en="Open to Full Stack, IT, and bilingual technical support opportunities"
-                >
-                    Abierto a oportunidades Full Stack, IT y soporte técnico bilingüe
-                </p>
-            </div>
-        </section>
-
-    </main>
+                <footer class="site-footer reveal">
+                    <span>ALPIZAR // SYSTEM STATUS: ONLINE</span>
+                    <span>© <span id="currentYear"></span> ANGEL ALFREDO</span>
+                </footer>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
