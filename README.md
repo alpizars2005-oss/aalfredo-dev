@@ -2,7 +2,7 @@
 
 This is my bilingual personal portfolio website. I built it with HTML, CSS, and vanilla JavaScript to present current software projects, automation work, technical credentials, skills, and contact options.
 
-The portfolio is intentionally focused on work I can already show publicly. Infrastructure and homelab work will be added later when it is ready to be documented properly.
+The portfolio is intentionally focused on work I can already show publicly.
 
 ## Live Website
 
@@ -66,12 +66,10 @@ In progress:
 
 The portfolio should only claim work or credentials that can be supported by completed projects, public repositories/releases, or confirmed course completion. In-progress programs are labeled explicitly and are not presented as completed certifications.
 
-The homelab is intentionally not published yet.
-
 ## Future Improvements
 
 - Add credential verification links or certificate files when they are ready for public sharing
 - Add project screenshots and release highlights
 - Improve accessibility details and keyboard/navigation polish
 - Keep project summaries synchronized with major releases
-- Add infrastructure/homelab work only after it has stable documentation
+- Add infrastructure work only after it has stable documentation
