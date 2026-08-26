@@ -67,3 +67,35 @@ Refresh the public portfolio to better represent current software, automation, I
 ## Risk / rollback
 
 Overall risk is low because this remains a static HTML/CSS/JavaScript site. No dependencies were added and no existing JavaScript behavior was replaced. Each change can be rolled back with a normal Git revert of the corresponding commit.
+
+---
+
+# Repository quality audit — 2026-08-26
+
+## Goal
+
+Add a lightweight quality gate around the static portfolio without changing its visual identity, bilingual interaction model, CV behavior, or published content scope.
+
+## Findings
+
+- The site has no automated syntax/structure checks today.
+- Navigation, bilingual `data-es`/`data-en` pairs, local asset references, and required JavaScript IDs can be validated with a dependency-free script.
+- The design uses animation/reveal effects but does not currently expose an explicit reduced-motion fallback.
+
+## Atomic commit plan
+
+1. **Add static-site CI and repository hygiene**
+   - Add `.editorconfig`.
+   - Add a standard-library HTML contract checker.
+   - Run the checker plus `node --check script.js` in GitHub Actions with immutable action SHAs and read-only permissions.
+
+2. **Respect reduced-motion preferences**
+   - Disable non-essential transitions/animations when `prefers-reduced-motion: reduce` is active.
+   - Preserve the default appearance for all other visitors.
+
+3. **Document verification**
+   - Record local verification commands in README.
+
+## Risk / rollback
+
+Low. The only browser-facing change is an accessibility media query. CI/tooling changes do not alter runtime behavior and can be reverted independently.
