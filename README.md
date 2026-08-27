@@ -51,6 +51,27 @@ In progress:
 - Google IT Automation with Python Professional Certificate
 - Google Cybersecurity Professional Certificate
 
+## Automated Verification
+
+The repository has a dependency-free portfolio contract checker plus JavaScript syntax validation in GitHub Actions.
+
+The checks protect the pieces that are easiest to break during content updates:
+
+- required section and JavaScript IDs remain present;
+- navigation anchors point to real sections;
+- local CSS/JavaScript/CV references exist in the repository;
+- every translatable element keeps `data-es` and `data-en` together;
+- `script.js` remains syntactically valid.
+
+Run the same checks locally:
+
+```bash
+python scripts/check_site.py
+node --check script.js
+```
+
+The CI workflow uses read-only repository permissions and immutable Action commit references.
+
 ## What I Practiced
 
 - Semantic HTML structure
@@ -61,6 +82,7 @@ In progress:
 - Repository organization and GitHub Pages publishing
 - Presenting private-development/public-release boundaries clearly
 - Keeping completed credentials separate from in-progress learning paths
+- Static contract testing for a zero-build website
 
 ## Current Content Policy
 
