@@ -141,6 +141,46 @@ Increase product clarity and recruiter scanability while preserving the portfoli
 - Do not add Next.js/React/Tailwind solely to imitate the reference portfolio.
 - Keep all translated user-facing copy paired with `data-es` / `data-en`.
 
+## Implemented
+
+### `a948944` — Plan portfolio visual storytelling upgrade
+
+- Recorded the legal boundary, UX goals, constraints, validation, and rollback strategy before implementation.
+
+### `7af2a95` — Add original portfolio storytelling styles
+
+- Added `storytelling.css` with original ALPIZAR_OS components for metrics, featured-build visualization, developer profile, focus timeline, project metadata, and Discord feedback.
+- Added responsive and reduced-motion behavior without a framework or build step.
+
+### `3383e70` — Add portfolio product storytelling layer
+
+- Added a three-item portfolio snapshot after the hero.
+- Added the Strategy Lab featured-build system visualization and explicit `not a screenshot` disclosure.
+- Added `developer.py`, a current-trajectory timeline, project metadata, capability explanations, and Discord copy-to-clipboard behavior.
+- Preserved the existing language boot flow, CV switching, navigation, reveal observer, and project links.
+
+### `3f50f9f` — Polish storytelling responsive contact layout
+
+- Integrated the fifth Discord contact into desktop, tablet, and mobile grids without disturbing the existing four actions.
+- Added keyboard focus and copied-state styling.
+
+### `3cf7278` — Validate storytelling module contract
+
+- Extended the dependency-free checker to require the storytelling stylesheet and critical runtime hooks.
+- Protects the Discord username binding and explicit conceptual-visual disclosure from accidental deletion.
+
+### `b69daf0` — Document portfolio storytelling upgrade
+
+- Documented the no-copy legal boundary, zero-framework approach, visual-storytelling features, validation, and future real-screenshot path.
+
+## Validation
+
+- GitHub Actions `Portfolio checks` run `33035293650` passed after the main JavaScript storytelling implementation.
+- GitHub Actions `Portfolio checks` run `33035378885` passed after responsive polish, the stricter storytelling contract, and README updates.
+- Existing checker still validates static navigation targets, required IDs, local static assets, and translation pairs in `index.html`.
+- `node --check script.js` passes in CI with the storytelling injection and clipboard fallback.
+- No Next.js, React, Tailwind, npm dependency, third-party runtime script, third-party code, or third-party image was added.
+
 ## Risk / rollback
 
-Low to moderate. Changes are static HTML/CSS/JavaScript and remain dependency-free, but they touch multiple visible sections and responsive layouts. Each implementation slice should be committed independently and can be reverted independently.
+Low to moderate. The visible additions are injected by the existing vanilla JavaScript runtime and styled by one isolated stylesheet. Reverting `3383e70` removes the new runtime layer; reverting `7af2a95` / `3f50f9f` removes its styles. Documentation and checker commits can be reverted independently.
