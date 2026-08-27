@@ -13,11 +13,30 @@ https://alpizars2005-oss.github.io/aalfredo-dev/
 - English and Spanish language selection
 - Responsive layout for desktop and mobile
 - Current project showcase with repository or release links
+- Product-storytelling layer with a featured build, project metadata, and engineering signals
+- Original Strategy Lab system visualization clearly labeled as a conceptual visualization, not a product screenshot
+- Terminal-style `developer.py` profile and current-focus timeline
 - Technical stack and applied-security focus
 - Completed credentials plus professional certificates in progress
-- Contact buttons
+- Contact buttons plus copy-to-clipboard Discord username (`pizzaroles24`)
 - CV download button that changes depending on the selected language
 - Published with GitHub Pages
+
+## Visual Storytelling Approach
+
+The site keeps its original `ALPIZAR_OS` / systems-console identity while borrowing only general UX ideas common to strong software portfolios: show a flagship build early, make projects scannable, surface engineering metadata, and explain capabilities through outcomes rather than technology names alone.
+
+The implementation in `storytelling.css` and `script.js` was written specifically for this portfolio. It does not copy third-party portfolio source code, CSS, component markup, written copy, or visual assets.
+
+The added layer remains intentionally lightweight:
+
+- no React or Next.js migration;
+- no Tailwind or component framework;
+- no package manager or build step;
+- no third-party runtime dependencies;
+- no fabricated screenshots or experience metrics.
+
+When real project screenshots are ready for public use, the featured visualization and project presentation can accept them without changing the site's architecture.
 
 ## Technologies Used
 
@@ -35,6 +54,8 @@ https://alpizars2005-oss.github.io/aalfredo-dev/
 - Job Search Assistant — privacy-first bilingual job-application workspace
 - Mochi Mochi — mobile-focused web product experiment for a small food business
 - UCAMP Projects — Python and software-development learning portfolio
+
+Each project also exposes compact metadata for type, year, public/private boundary, and a representative engineering signal such as CI or tests.
 
 ## Credentials Featured
 
@@ -60,7 +81,10 @@ The checks protect the pieces that are easiest to break during content updates:
 - required section and JavaScript IDs remain present;
 - navigation anchors point to real sections;
 - local CSS/JavaScript/CV references exist in the repository;
-- every translatable element keeps `data-es` and `data-en` together;
+- every static translatable element keeps `data-es` and `data-en` together;
+- the storytelling stylesheet and its required runtime hooks remain present;
+- the Discord copy action remains bound to the published username;
+- the conceptual visual keeps its explicit `not a screenshot` disclosure;
 - `script.js` remains syntactically valid.
 
 Run the same checks locally:
@@ -77,7 +101,9 @@ The CI workflow uses read-only repository permissions and immutable Action commi
 - Semantic HTML structure
 - Responsive CSS layout
 - DOM manipulation with vanilla JavaScript
+- Progressive product storytelling without adding a framework
 - Language switching using `data-es` / `data-en` attributes
+- Clipboard UX with a fallback path and accessible live feedback
 - File downloads based on the selected language
 - Repository organization and GitHub Pages publishing
 - Presenting private-development/public-release boundaries clearly
@@ -88,10 +114,12 @@ The CI workflow uses read-only repository permissions and immutable Action commi
 
 The portfolio should only claim work or credentials that can be supported by completed projects, public repositories/releases, or confirmed course completion. In-progress programs are labeled explicitly and are not presented as completed certifications.
 
+Conceptual visuals must be presented as conceptual visuals. Product screenshots should only be added when they are real, owned/authorized, and ready for public sharing.
+
 ## Future Improvements
 
 - Add credential verification links or certificate files when they are ready for public sharing
-- Add project screenshots and release highlights
+- Replace or complement conceptual project visuals with real screenshots when suitable assets are available
 - Improve accessibility details and keyboard/navigation polish
 - Keep project summaries synchronized with major releases
 - Add infrastructure work only after it has stable documentation
