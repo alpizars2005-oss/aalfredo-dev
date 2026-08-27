@@ -6,6 +6,8 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
+SCRIPT = ROOT / "script.js"
+STORYTELLING_STYLES = ROOT / "storytelling.css"
 
 REQUIRED_IDS = {
     "languageScreen",
@@ -18,6 +20,15 @@ REQUIRED_IDS = {
     "contact",
     "downloadCvBtn",
     "currentYear",
+}
+
+REQUIRED_STORYTELLING_TOKENS = {
+    'storytellingStylesheet.href = "storytelling.css"',
+    'id="storyMetrics"',
+    'id="copyDiscordBtn"',
+    'id="discordCopyStatus"',
+    'const username = "pizzaroles24"',
+    "SYSTEM VISUALIZATION · NOT A SCREENSHOT",
 }
 
 
@@ -71,12 +82,26 @@ def main() -> None:
         errors.append(f"Missing local assets: {missing_files}")
     errors.extend(parser.translation_errors)
 
+    if not STORYTELLING_STYLES.is_file():
+        errors.append("Missing storytelling.css")
+
+    script_text = SCRIPT.read_text(encoding="utf-8")
+    missing_storytelling_tokens = sorted(
+        token for token in REQUIRED_STORYTELLING_TOKENS if token not in script_text
+    )
+    if missing_storytelling_tokens:
+        errors.append(
+            "Storytelling module contract missing tokens: "
+            f"{missing_storytelling_tokens}"
+        )
+
     if errors:
         raise SystemExit("\n".join(errors))
 
     print(
         f"Portfolio contract OK: {len(parser.ids)} ids, "
-        f"{len(parser.anchor_targets)} local anchors, {len(parser.local_refs)} local files."
+        f"{len(parser.anchor_targets)} local anchors, {len(parser.local_refs)} local files, "
+        f"{len(REQUIRED_STORYTELLING_TOKENS)} storytelling hooks."
     )
 
 
