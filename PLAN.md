@@ -99,3 +99,48 @@ Add a lightweight quality gate around the static portfolio without changing its 
 ## Risk / rollback
 
 Low. The only browser-facing change is an accessibility media query. CI/tooling changes do not alter runtime behavior and can be reverted independently.
+
+---
+
+# Visual storytelling upgrade — 2026-08-26
+
+## Source / legal boundary
+
+The upgrade is inspired by general portfolio UX patterns observed in `dreadfulstep/portfolio`, whose public repository does not expose a license in the inspected tree. No source code, CSS, component markup, copy, or proprietary imagery from that repository will be copied. All implementation below is original and adapted to the existing `ALPIZAR_OS` visual system.
+
+## Goal
+
+Increase product clarity and recruiter scanability while preserving the portfolio's static architecture, bilingual behavior, current public project scope, and distinctive systems/terminal identity.
+
+## Atomic commit plan
+
+1. **Add product storytelling structure**
+   - Add a post-hero metrics strip.
+   - Add an original featured-build visualization for Ultimate Macro Strategy Lab using HTML/CSS only, clearly presented as a system visualization rather than a product screenshot.
+   - Add richer project metadata such as type, year, visibility, and engineering signal without changing project claims.
+
+2. **Add developer and experience narratives**
+   - Add an original `developer.py` terminal-style profile panel.
+   - Add a compact experience/focus timeline using only currently supportable public-facing claims.
+   - Expand capability cards with one-sentence explanations of how each skill group is used.
+
+3. **Improve contact UX**
+   - Add Discord username `pizzaroles24` as a copy-to-clipboard contact action.
+   - Add accessible live feedback for successful/failed clipboard operations.
+   - Do not invent a Discord `/users/<id>` URL because only the username is currently known.
+
+4. **Validate and document**
+   - Extend the static contract checker if new required IDs/hooks are introduced.
+   - Run the existing HTML contract checker and `node --check script.js` in CI.
+   - Update README to document the visual-storytelling layer and its no-framework/no-new-dependency approach.
+
+## Constraints
+
+- Do not add unpublished infrastructure/homelab content.
+- Do not fabricate screenshots, years of professional experience, client work, user counts, or performance numbers.
+- Do not add Next.js/React/Tailwind solely to imitate the reference portfolio.
+- Keep all translated user-facing copy paired with `data-es` / `data-en`.
+
+## Risk / rollback
+
+Low to moderate. Changes are static HTML/CSS/JavaScript and remain dependency-free, but they touch multiple visible sections and responsive layouts. Each implementation slice should be committed independently and can be reverted independently.
