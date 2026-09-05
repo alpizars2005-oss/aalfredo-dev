@@ -1,6 +1,6 @@
 # Angel Alfredo | Personal Portfolio
 
-This is my bilingual personal portfolio website. I built it with HTML, CSS, and vanilla JavaScript to present current software projects, automation work, technical credentials, skills, and contact options.
+This is my bilingual personal portfolio website. I built it with HTML, CSS, and vanilla JavaScript to present current Python/software projects, Data/AI and QA work, automation, systems learning, technical credentials, and contact options.
 
 The portfolio is intentionally focused on work I can already show publicly.
 
@@ -17,7 +17,7 @@ https://alpizars2005-oss.github.io/aalfredo-dev/
 - Original Strategy Lab system visualization clearly labeled as a conceptual visualization, not a product screenshot
 - Terminal-style `developer.py` profile and current-focus timeline
 - Technical stack and applied-security focus
-- Completed credentials plus professional certificates in progress
+- Completed credentials across Python, Git/GitHub, debugging, cybersecurity, and data, plus professional certificate paths in progress
 - Contact buttons plus copy-to-clipboard Discord username (`pizzaroles24`)
 - CV download button that changes depending on the selected language
 - Published with GitHub Pages
@@ -65,12 +65,16 @@ Completed:
 - Using Python to Interact with the Operating System — Google / Coursera
 - Introduction to Git and GitHub — Google / Coursera
 - Foundations of Cybersecurity — Google / Coursera
+- Troubleshooting and Debugging Techniques — Google / Coursera
+- Introduction to Cybersecurity — Cisco Networking Academy
+- I Validated and Operated Data – Outstanding — UTEL Universidad
 - CPFIA Preparatory Course — TecNM / CPFIA
 
 In progress:
 
 - Google IT Automation with Python Professional Certificate
 - Google Cybersecurity Professional Certificate
+- CPFIA / Cisco Networking & Cybersecurity training path
 
 ## Automated Verification
 
