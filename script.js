@@ -329,12 +329,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (language === "en") {
             document.title = "Angel Alfredo | Systems Portfolio";
             if (description) {
-                description.content = "Angel Alfredo Alpizar portfolio: systems, development, automation, Linux, and cybersecurity.";
+                description.content = "Angel Alfredo Alpizar portfolio: Python, Data/AI, QA, automation, systems, Linux, and cybersecurity.";
             }
         } else {
             document.title = "Angel Alfredo | Portfolio de Sistemas";
             if (description) {
-                description.content = "Portfolio de Angel Alfredo Alpizar: sistemas, desarrollo, automatización, Linux y ciberseguridad.";
+                description.content = "Portfolio de Angel Alfredo Alpizar: Python, Data/AI, QA, automatización, sistemas, Linux y ciberseguridad.";
             }
         }
     }
