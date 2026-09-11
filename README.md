@@ -17,7 +17,7 @@ https://alpizars2005-oss.github.io/aalfredo-dev/
 - Original Strategy Lab system visualization clearly labeled as a conceptual visualization, not a product screenshot
 - Terminal-style `developer.py` profile and current-focus timeline
 - Technical stack and applied-security focus
-- Completed credentials across Python, Git/GitHub, debugging, cybersecurity, and data, plus professional certificate paths in progress
+- Completed credentials across Python, Git/GitHub, debugging, cloud configuration, cybersecurity, and data, plus professional certificate paths in progress
 - Contact buttons plus copy-to-clipboard Discord username (`pizzaroles24`)
 - CV download button that changes depending on the selected language
 - Published with GitHub Pages
@@ -66,6 +66,8 @@ Completed:
 - Introduction to Git and GitHub — Google / Coursera
 - Foundations of Cybersecurity — Google / Coursera
 - Troubleshooting and Debugging Techniques — Google / Coursera
+- Configuration Management and the Cloud — Google / Coursera
+- Play It Safe: Manage Security Risks — Google / Coursera
 - Introduction to Cybersecurity — Cisco Networking Academy
 - I Validated and Operated Data – Outstanding — UTEL Universidad
 - CPFIA Preparatory Course — TecNM / CPFIA
