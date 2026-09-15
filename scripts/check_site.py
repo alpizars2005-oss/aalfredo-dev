@@ -15,6 +15,7 @@ REQUIRED_IDS = {
     "navLinks",
     "profile",
     "projects",
+    "homelab",
     "stack",
     "certifications",
     "contact",
@@ -25,10 +26,14 @@ REQUIRED_IDS = {
 REQUIRED_STORYTELLING_TOKENS = {
     'storytellingStylesheet.href = "storytelling.css"',
     'id="storyMetrics"',
-    'id="copyDiscordBtn"',
-    'id="discordCopyStatus"',
-    'const username = "pizzaroles24"',
+    "Ultimate Macro: The New Era",
+    "alpizars2005-oss",
     "SYSTEM VISUALIZATION · NOT A SCREENSHOT",
+}
+
+FORBIDDEN_PUBLIC_TOKENS = {
+    "pizzaroles24",
+    "Ultimate Macro Strategy Lab",
 }
 
 
@@ -66,8 +71,11 @@ class PortfolioParser(HTMLParser):
 
 
 def main() -> None:
+    index_text = INDEX.read_text(encoding="utf-8")
+    script_text = SCRIPT.read_text(encoding="utf-8")
+
     parser = PortfolioParser()
-    parser.feed(INDEX.read_text(encoding="utf-8"))
+    parser.feed(index_text)
 
     errors: list[str] = []
     missing_ids = REQUIRED_IDS - parser.ids
@@ -85,7 +93,6 @@ def main() -> None:
     if not STORYTELLING_STYLES.is_file():
         errors.append("Missing storytelling.css")
 
-    script_text = SCRIPT.read_text(encoding="utf-8")
     missing_storytelling_tokens = sorted(
         token for token in REQUIRED_STORYTELLING_TOKENS if token not in script_text
     )
@@ -94,6 +101,11 @@ def main() -> None:
             "Storytelling module contract missing tokens: "
             f"{missing_storytelling_tokens}"
         )
+
+    combined_public_text = index_text + "\n" + script_text
+    forbidden_hits = sorted(token for token in FORBIDDEN_PUBLIC_TOKENS if token in combined_public_text)
+    if forbidden_hits:
+        errors.append(f"Stale public branding tokens remain: {forbidden_hits}")
 
     if errors:
         raise SystemExit("\n".join(errors))
