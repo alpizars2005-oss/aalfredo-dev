@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#06080d">
-    <meta name="description" content="Portfolio de Angel Alfredo Alpizar: Python, Data/AI, QA, automatización, sistemas, Linux y ciberseguridad.">
+    <meta name="description" content="Portfolio de Angel Alfredo Alpizar: Python, automatización, infraestructura, Linux, QA y ciberseguridad.">
     <title>Angel Alfredo | Systems Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,486 +12,219 @@
     <div class="ambient-grid" aria-hidden="true"></div>
     <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-    <!-- LANGUAGE / BOOT SCREEN -->
     <section class="language-screen" id="languageScreen" aria-label="Language selection">
         <div class="boot-shell">
-            <div class="boot-topline">
-                <span>ALPIZAR_OS</span>
-                <span>BOOT / 01</span>
-            </div>
-
+            <div class="boot-topline"><span>ALPIZAR_OS</span><span>BOOT / 01</span></div>
             <div class="boot-copy">
                 <p class="eyebrow">SYSTEM / INITIALIZING</p>
                 <h1>Choose your<br><span>interface.</span></h1>
                 <p class="boot-description">Select a language to initialize the portfolio environment.</p>
             </div>
-
             <div class="boot-log" aria-hidden="true">
                 <span>&gt; loading profile.data</span>
                 <span>&gt; mounting projects.db</span>
                 <span>&gt; interface ready_</span>
             </div>
-
             <div class="language-buttons">
-                <button class="language-btn" type="button" data-language="en">
-                    <span class="button-index">01</span>
-                    <span>English</span>
-                    <span class="button-arrow">↗</span>
-                </button>
-                <button class="language-btn" type="button" data-language="es">
-                    <span class="button-index">02</span>
-                    <span>Español</span>
-                    <span class="button-arrow">↗</span>
-                </button>
+                <button class="language-btn" type="button" data-language="en"><span class="button-index">01</span><span>English</span><span class="button-arrow">↗</span></button>
+                <button class="language-btn" type="button" data-language="es"><span class="button-index">02</span><span>Español</span><span class="button-arrow">↗</span></button>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
     <div class="portfolio-shell hidden" id="portfolio">
         <header class="topbar">
-            <a class="brand" href="#top" aria-label="Back to top">
-                <span class="brand-mark">AA</span>
-                <span class="brand-copy">
-                    <strong>ALPIZAR</strong>
-                    <small>SYSTEMS / PORTFOLIO</small>
-                </span>
-            </a>
-
-            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
-                MENU
-            </button>
-
+            <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">AA</span><span class="brand-copy"><strong>ALPIZAR</strong><small>SYSTEMS / PORTFOLIO</small></span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">MENU</button>
             <nav class="nav-links" id="navLinks" aria-label="Portfolio navigation">
                 <a href="#profile" data-es="Perfil" data-en="Profile">Perfil</a>
                 <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#homelab" data-es="Homelab" data-en="Homelab">Homelab</a>
                 <a href="#stack" data-es="Stack" data-en="Stack">Stack</a>
                 <a href="#certifications" data-es="Certificados" data-en="Credentials">Certificados</a>
                 <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
             </nav>
-
             <button class="language-switch" type="button" id="changeLanguageBtn">ES / EN</button>
         </header>
 
         <main id="top">
-            <!-- HERO -->
             <section class="hero section-frame" aria-labelledby="heroTitle">
                 <div class="hero-main reveal">
-                    <div class="system-line">
-                        <span class="live-dot"></span>
-                        <span data-es="SISTEMA / EN LÍNEA" data-en="SYSTEM / ONLINE">SISTEMA / EN LÍNEA</span>
-                        <span class="line-spacer"></span>
-                        <span>MX / UTC-6</span>
-                    </div>
-
+                    <div class="system-line"><span class="live-dot"></span><span data-es="SISTEMA / EN LÍNEA" data-en="SYSTEM / ONLINE">SISTEMA / EN LÍNEA</span><span class="line-spacer"></span><span>MX / UTC-6</span></div>
                     <p class="sequence">00 / ENTRY POINT</p>
-                    <h1 id="heroTitle" class="hero-title">
-                        <span>ANGEL</span>
-                        <span class="outline-text">ALFREDO</span>
-                        <span>ALPIZAR</span>
-                    </h1>
-
+                    <h1 id="heroTitle" class="hero-title"><span>ANGEL</span><span class="outline-text">ALFREDO</span><span>ALPIZAR</span></h1>
                     <div class="hero-summary">
-                        <p class="hero-role" data-es="Ingeniería en Sistemas · Python · Data/AI · QA" data-en="Systems Engineering · Python · Data/AI · QA">
-                            Ingeniería en Sistemas · Python · Data/AI · QA
-                        </p>
+                        <p class="hero-role" data-es="Ingeniería en Sistemas · Python · Infraestructura · Ciberseguridad" data-en="Systems Engineering · Python · Infrastructure · Cybersecurity">Ingeniería en Sistemas · Python · Infraestructura · Ciberseguridad</p>
                         <p class="hero-description"
-                           data-es="Construyo herramientas con Python, automatizo procesos y trabajo con evaluación de IA, calidad de datos, QA, Linux y fundamentos de ciberseguridad. Mi objetivo es convertir ese aprendizaje en software y operaciones técnicas reales."
-                           data-en="I build Python tools, automate workflows, and work with AI evaluation, data quality, QA, Linux, and cybersecurity fundamentals. My goal is to turn that learning into real software and technical operations work.">
-                            Construyo herramientas con Python, automatizo procesos y trabajo con evaluación de IA, calidad de datos, QA, Linux y fundamentos de ciberseguridad. Mi objetivo es convertir ese aprendizaje en software y operaciones técnicas reales.
-                        </p>
+                           data-es="Construyo software y automatizaciones, contribuyo a un proyecto open source con cambios integrados upstream y administro un homelab Linux/Proxmox donde practico servicios, almacenamiento, acceso remoto, validación y operación segura."
+                           data-en="I build software and automation, contribute upstream to an open-source project, and operate a Linux/Proxmox homelab where I practice services, storage, remote access, validation, and secure operations.">Construyo software y automatizaciones, contribuyo a un proyecto open source con cambios integrados upstream y administro un homelab Linux/Proxmox donde practico servicios, almacenamiento, acceso remoto, validación y operación segura.</p>
                     </div>
-
                     <div class="hero-actions">
-                        <a class="action-link primary-action" href="#projects">
-                            <span data-es="Explorar proyectos" data-en="Explore projects">Explorar proyectos</span>
-                            <span>↓</span>
-                        </a>
-                        <a class="action-link" href="https://github.com/alpizars2005-oss" target="_blank" rel="noreferrer">
-                            <span>GitHub</span><span>↗</span>
-                        </a>
-                        <a class="action-link" href="https://www.linkedin.com/in/angel-alfredo-alpizar-sanchez-6559a4278" target="_blank" rel="noreferrer">
-                            <span>LinkedIn</span><span>↗</span>
-                        </a>
+                        <a class="action-link primary-action" href="#projects"><span data-es="Explorar proyectos" data-en="Explore projects">Explorar proyectos</span><span>↓</span></a>
+                        <a class="action-link" href="https://github.com/alpizars2005-oss" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a>
+                        <a class="action-link" href="https://www.linkedin.com/in/angel-alfredo-alpizar-sanchez-6559a4278" target="_blank" rel="noreferrer"><span>LinkedIn</span><span>↗</span></a>
                     </div>
                 </div>
-
                 <aside class="hero-console reveal" aria-label="System profile">
-                    <div class="console-header">
-                        <span>PROFILE.DATA</span>
-                        <span class="console-status">LIVE</span>
-                    </div>
+                    <div class="console-header"><span>PROFILE.DATA</span><span class="console-status">LIVE</span></div>
                     <div class="console-body">
-                        <div class="console-row">
-                            <span class="console-key">ROLE</span>
-                            <span data-es="Estudiante de Sistemas" data-en="Systems Engineering Student">Estudiante de Sistemas</span>
-                        </div>
-                        <div class="console-row">
-                            <span class="console-key">FOCUS</span>
-                            <span>Python / Data / QA / Cyber</span>
-                        </div>
-                        <div class="console-row">
-                            <span class="console-key">LANG</span>
-                            <span>ES / EN</span>
-                        </div>
-                        <div class="console-row">
-                            <span class="console-key">MODE</span>
-                            <span data-es="Construyendo" data-en="Building">Construyendo</span>
-                        </div>
+                        <div class="console-row"><span class="console-key">ROLE</span><span data-es="Estudiante de Sistemas" data-en="Systems Engineering Student">Estudiante de Sistemas</span></div>
+                        <div class="console-row"><span class="console-key">FOCUS</span><span>Python / IT / Infra / Cyber</span></div>
+                        <div class="console-row"><span class="console-key">GITHUB</span><span>alpizars2005-oss</span></div>
+                        <div class="console-row"><span class="console-key">MODE</span><span data-es="Construyendo" data-en="Building">Construyendo</span></div>
                     </div>
-                    <div class="console-command">
-                        <span>aalfredo@portfolio:~$</span>
-                        <span class="terminal-command" data-es="./build_next.sh" data-en="./build_next.sh">./build_next.sh</span>
-                        <span class="terminal-cursor">_</span>
-                    </div>
+                    <div class="console-command"><span>alpizars2005-oss@portfolio:~$</span><span class="terminal-command">./build_next.sh</span><span class="terminal-cursor">_</span></div>
                 </aside>
-
-                <div class="scroll-marker" aria-hidden="true">
-                    <span>SCROLL</span>
-                    <div></div>
-                </div>
+                <div class="scroll-marker" aria-hidden="true"><span>SCROLL</span><div></div></div>
             </section>
 
-            <!-- PROFILE -->
             <section class="content-section section-frame" id="profile">
-                <div class="section-heading reveal">
-                    <p class="sequence">01 / PROFILE</p>
-                    <h2 data-es="Pensar como sistema." data-en="Think in systems.">Pensar como sistema.</h2>
-                </div>
-
+                <div class="section-heading reveal"><p class="sequence">01 / PROFILE</p><h2 data-es="Pensar como sistema." data-en="Think in systems.">Pensar como sistema.</h2></div>
                 <div class="profile-grid">
-                    <div class="profile-statement reveal">
-                        <p data-es="Mi objetivo no es coleccionar tecnologías. Es conectar software, datos, automatización, sistemas y seguridad para resolver problemas reales."
-                           data-en="My goal is not to collect technologies. It is to connect software, data, automation, systems, and security to solve real problems.">
-                            Mi objetivo no es coleccionar tecnologías. Es conectar software, datos, automatización, sistemas y seguridad para resolver problemas reales.
-                        </p>
-                    </div>
-
+                    <div class="profile-statement reveal"><p data-es="Mi objetivo es conectar software, automatización, infraestructura y seguridad para resolver problemas reales y poder explicar cómo sé que una solución funciona." data-en="My goal is to connect software, automation, infrastructure, and security to solve real problems and explain how I know a solution works.">Mi objetivo es conectar software, automatización, infraestructura y seguridad para resolver problemas reales y poder explicar cómo sé que una solución funciona.</p></div>
                     <div class="profile-data reveal">
-                        <article>
-                            <span>01</span>
-                            <h3 data-es="Construir" data-en="Build">Construir</h3>
-                            <p data-es="Aplicaciones y herramientas con una razón clara de existir." data-en="Applications and tools with a clear reason to exist.">Aplicaciones y herramientas con una razón clara de existir.</p>
-                        </article>
-                        <article>
-                            <span>02</span>
-                            <h3 data-es="Automatizar" data-en="Automate">Automatizar</h3>
-                            <p data-es="Convertir tareas repetitivas en flujos controlables y verificables." data-en="Turn repetitive work into controllable, verifiable workflows.">Convertir tareas repetitivas en flujos controlables y verificables.</p>
-                        </article>
-                        <article>
-                            <span>03</span>
-                            <h3 data-es="Entender" data-en="Understand">Entender</h3>
-                            <p data-es="Ir debajo de la UI: Linux, redes, datos, procesos y seguridad." data-en="Go below the UI: Linux, networking, data, processes, and security.">Ir debajo de la UI: Linux, redes, datos, procesos y seguridad.</p>
-                        </article>
+                        <article><span>01</span><h3 data-es="Construir" data-en="Build">Construir</h3><p data-es="Aplicaciones, herramientas y automatizaciones con una razón clara de existir." data-en="Applications, tools, and automation with a clear reason to exist.">Aplicaciones, herramientas y automatizaciones con una razón clara de existir.</p></article>
+                        <article><span>02</span><h3 data-es="Operar" data-en="Operate">Operar</h3><p data-es="Linux, servicios, almacenamiento y acceso remoto con límites y recuperación definidos." data-en="Linux, services, storage, and remote access with defined boundaries and recovery paths.">Linux, servicios, almacenamiento y acceso remoto con límites y recuperación definidos.</p></article>
+                        <article><span>03</span><h3 data-es="Validar" data-en="Validate">Validar</h3><p data-es="Pruebas, CI, hashes, logs y evidencia antes de llamar terminado a un cambio." data-en="Tests, CI, hashes, logs, and evidence before calling a change done.">Pruebas, CI, hashes, logs y evidencia antes de llamar terminado a un cambio.</p></article>
                     </div>
                 </div>
             </section>
 
-            <!-- PROJECTS -->
             <section class="content-section section-frame" id="projects">
                 <div class="section-heading reveal">
                     <p class="sequence">02 / PROJECT DATABASE</p>
                     <h2 data-es="Trabajo seleccionado." data-en="Selected work.">Trabajo seleccionado.</h2>
-                    <p class="section-intro" data-es="Proyectos recientes que muestran desarrollo de producto, automatización, seguridad práctica, pruebas y aprendizaje técnico aplicado." data-en="Recent projects showing product development, automation, practical security, testing, and applied technical learning.">
-                        Proyectos recientes que muestran desarrollo de producto, automatización, seguridad práctica, pruebas y aprendizaje técnico aplicado.
-                    </p>
+                    <p class="section-intro" data-es="Proyectos y contribuciones que muestran software, automatización, QA, release engineering e infraestructura práctica." data-en="Projects and contributions showing software, automation, QA, release engineering, and practical infrastructure work.">Proyectos y contribuciones que muestran software, automatización, QA, release engineering e infraestructura práctica.</p>
                 </div>
-
                 <div class="project-list">
                     <article class="project-row reveal">
-                        <div class="project-index">P.001</div>
-                        <div class="project-copy">
-                            <div class="project-meta">
-                                <span>PYTHON / WINDOWS / SQLITE</span>
-                                <span class="project-status"><i></i> ACTIVE</span>
-                            </div>
+                        <div class="project-index">P.001</div><div class="project-copy">
+                            <div class="project-meta"><span>PYTHON / WINDOWS / SQLITE</span><span class="project-status"><i></i> ACTIVE</span></div>
                             <h3>Alpizers</h3>
-                            <p data-es="Centro multimedia y gestor de descargas para Windows con cola persistente, biblioteca local, descargas HTTPS, verificación de integridad, análisis local con Microsoft Defender y una interfaz bilingüe. El desarrollo principal es privado y las builds oficiales se publican en un repositorio de releases separado."
-                               data-en="Windows media hub and download manager with a persistent queue, local library, HTTPS downloads, integrity verification, local Microsoft Defender scanning, and a bilingual interface. Main development is private while official builds are published through a separate public releases repository.">
-                                Centro multimedia y gestor de descargas para Windows con cola persistente, biblioteca local, descargas HTTPS, verificación de integridad, análisis local con Microsoft Defender y una interfaz bilingüe. El desarrollo principal es privado y las builds oficiales se publican en un repositorio de releases separado.
-                            </p>
+                            <p data-es="Centro multimedia y gestor de descargas para Windows con cola persistente, biblioteca local, HTTPS, verificación de integridad, análisis local con Microsoft Defender y una interfaz bilingüe. El código principal es privado; las builds se publican por separado." data-en="Windows media hub and download manager with a persistent queue, local library, HTTPS downloads, integrity verification, local Microsoft Defender scanning, and a bilingual interface. Main source is private; builds are published separately.">Centro multimedia y gestor de descargas para Windows con cola persistente, biblioteca local, HTTPS, verificación de integridad, análisis local con Microsoft Defender y una interfaz bilingüe. El código principal es privado; las builds se publican por separado.</p>
                             <div class="project-tags"><span>Python</span><span>SQLite</span><span>aria2</span><span>Security</span><span>Windows</span></div>
-                        </div>
-                        <a class="project-link" href="https://github.com/alpizars2005-oss/Media-Manager-Releases" target="_blank" rel="noreferrer" aria-label="Open Alpizers public releases on GitHub">↗</a>
+                        </div><a class="project-link" href="https://github.com/alpizars2005-oss/Media-Manager-Releases" target="_blank" rel="noreferrer" aria-label="Open Alpizers releases">↗</a>
                     </article>
 
                     <article class="project-row reveal">
-                        <div class="project-index">P.002</div>
-                        <div class="project-copy">
-                            <div class="project-meta">
-                                <span>AUTOHOTKEY / PYTHON / POWERSHELL</span>
-                                <span class="project-status"><i></i> LAB 0.4.13</span>
-                            </div>
-                            <h3>Ultimate Macro Strategy Lab</h3>
-                            <p data-es="Laboratorio experimental construido sobre la base oficial de Ultimate Macro para probar mejoras de forma aislada: editor visual de estrategias, calibración basada en evidencia, telemetría segura y actualizaciones verificadas por SHA-256 sin reemplazar el comportamiento upstream."
-                               data-en="Experimental lab built on the official Ultimate Macro baseline to test improvements in isolation: a visual strategy editor, evidence-driven calibration, safe telemetry, and SHA-256 verified updates without replacing upstream behavior.">
-                                Laboratorio experimental construido sobre la base oficial de Ultimate Macro para probar mejoras de forma aislada: editor visual de estrategias, calibración basada en evidencia, telemetría segura y actualizaciones verificadas por SHA-256 sin reemplazar el comportamiento upstream.
-                            </p>
-                            <div class="project-tags"><span>AutoHotkey v2</span><span>Python</span><span>PowerShell</span><span>Testing</span><span>Updater</span></div>
-                        </div>
-                        <a class="project-link" href="https://github.com/alpizars2005-oss/ultimate-macro-strategy-lab" target="_blank" rel="noreferrer" aria-label="Open Ultimate Macro Strategy Lab on GitHub">↗</a>
+                        <div class="project-index">P.002</div><div class="project-copy">
+                            <div class="project-meta"><span>AUTOHOTKEY / POWERSHELL / CI</span><span class="project-status"><i></i> UPSTREAM</span></div>
+                            <h3>Ultimate Macro: The New Era</h3>
+                            <p data-es="Contribución open source al proyecto oficial de automatización para Tower Defense Simulator. Mi trabajo integrado upstream incluye hardening de runtime, clasificación segura de fallos de placement, ciclo de vida del watchdog, updater/packaging verificable, QA automatizado y organización de release branches. Darksen permanece acreditado como creador original." data-en="Open-source contribution to the official Tower Defense Simulator automation project. My upstream work includes runtime hardening, safer placement-failure classification, watchdog lifecycle fixes, verified updater/packaging work, automated QA, and release-branch organization. Darksen remains credited as the original creator.">Contribución open source al proyecto oficial de automatización para Tower Defense Simulator. Mi trabajo integrado upstream incluye hardening de runtime, clasificación segura de fallos de placement, ciclo de vida del watchdog, updater/packaging verificable, QA automatizado y organización de release branches. Darksen permanece acreditado como creador original.</p>
+                            <div class="project-tags"><span>AutoHotkey v2</span><span>PowerShell</span><span>CI</span><span>QA</span><span>Release Engineering</span></div>
+                        </div><a class="project-link" href="https://github.com/UltimateMacro/Ultimate-Macro-New-Era" target="_blank" rel="noreferrer" aria-label="Open Ultimate Macro official repository">↗</a>
                     </article>
 
                     <article class="project-row reveal">
-                        <div class="project-index">P.003</div>
-                        <div class="project-copy">
-                            <div class="project-meta">
-                                <span>PYTHON / SQLITE / WORKFLOW</span>
-                                <span class="project-status"><i></i> ACTIVE</span>
-                            </div>
+                        <div class="project-index">P.003</div><div class="project-copy">
+                            <div class="project-meta"><span>PROXMOX / LINUX / ANSIBLE</span><span class="project-status"><i></i> RUNNING</span></div>
+                            <h3>AfeLab Homelab</h3>
+                            <p data-es="Homelab de infraestructura con Proxmox y servicios aislados. Actualmente opera Jellyfin, Alpizers y AfeNAS/SMB; la administración se mantiene privada mediante Tailscale. Un repositorio privado documenta seguridad, backups/DR, red, capacidad, runbooks y una ruta de automatización con Ansible." data-en="Infrastructure homelab built around Proxmox and isolated services. It currently runs Jellyfin, Alpizers, and AfeNAS/SMB, with private administration through Tailscale. A private source-of-truth repository documents security, backup/DR, networking, capacity, runbooks, and an Ansible automation path.">Homelab de infraestructura con Proxmox y servicios aislados. Actualmente opera Jellyfin, Alpizers y AfeNAS/SMB; la administración se mantiene privada mediante Tailscale. Un repositorio privado documenta seguridad, backups/DR, red, capacidad, runbooks y una ruta de automatización con Ansible.</p>
+                            <div class="project-tags"><span>Proxmox</span><span>Linux</span><span>SMB</span><span>Tailscale</span><span>Ansible</span></div>
+                        </div><a class="project-link" href="#homelab" aria-label="Open homelab section">↓</a>
+                    </article>
+
+                    <article class="project-row reveal">
+                        <div class="project-index">P.004</div><div class="project-copy">
+                            <div class="project-meta"><span>PYTHON / SQLITE / WORKFLOW</span><span class="project-status"><i></i> ACTIVE</span></div>
                             <h3>Job Search Assistant</h3>
-                            <p data-es="Workspace bilingüe y orientado a privacidad para evaluar vacantes, organizar aplicaciones, detectar señales de riesgo y exportar información sin depender de una API de pago."
-                               data-en="Privacy-first bilingual workspace for evaluating job postings, tracking applications, detecting risk signals, and exporting data without requiring a paid API.">
-                                Workspace bilingüe y orientado a privacidad para evaluar vacantes, organizar aplicaciones, detectar señales de riesgo y exportar información sin depender de una API de pago.
-                            </p>
+                            <p data-es="Workspace bilingüe y orientado a privacidad para evaluar vacantes, organizar aplicaciones, detectar señales de riesgo y exportar información sin depender de una API de pago." data-en="Privacy-first bilingual workspace for evaluating job postings, tracking applications, detecting risk signals, and exporting data without requiring a paid API.">Workspace bilingüe y orientado a privacidad para evaluar vacantes, organizar aplicaciones, detectar señales de riesgo y exportar información sin depender de una API de pago.</p>
                             <div class="project-tags"><span>Python</span><span>SQLite</span><span>CLI + GUI</span><span>Testing</span></div>
-                        </div>
-                        <a class="project-link" href="https://github.com/alpizars2005-oss/job-search-mx-assistant" target="_blank" rel="noreferrer" aria-label="Open Job Search Assistant on GitHub">↗</a>
+                        </div><a class="project-link" href="https://github.com/alpizars2005-oss/job-search-mx-assistant" target="_blank" rel="noreferrer" aria-label="Open Job Search Assistant">↗</a>
                     </article>
 
                     <article class="project-row reveal">
-                        <div class="project-index">P.004</div>
-                        <div class="project-copy">
-                            <div class="project-meta">
-                                <span>WEB / BUSINESS</span>
-                                <span class="project-status"><i></i> SHIPPED</span>
-                            </div>
+                        <div class="project-index">P.005</div><div class="project-copy">
+                            <div class="project-meta"><span>WEB / BUSINESS</span><span class="project-status"><i></i> SHIPPED</span></div>
                             <h3>Mochi Mochi</h3>
-                            <p data-es="Experimento de producto web para un pequeño negocio de comida: menú digital, experiencia móvil y flujo de contacto orientado a pedidos."
-                               data-en="Web product experiment for a small food business: digital menu, mobile experience, and an order-oriented contact flow.">
-                                Experimento de producto web para un pequeño negocio de comida: menú digital, experiencia móvil y flujo de contacto orientado a pedidos.
-                            </p>
+                            <p data-es="Experimento de producto web para un pequeño negocio de comida: menú digital, experiencia móvil y flujo de contacto orientado a pedidos." data-en="Web product experiment for a small food business: digital menu, mobile experience, and an order-oriented contact flow.">Experimento de producto web para un pequeño negocio de comida: menú digital, experiencia móvil y flujo de contacto orientado a pedidos.</p>
                             <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UX</span></div>
-                        </div>
-                        <a class="project-link" href="https://github.com/alpizars2005-oss/Mochi-Mochi" target="_blank" rel="noreferrer" aria-label="Open Mochi Mochi on GitHub">↗</a>
+                        </div><a class="project-link" href="https://github.com/alpizars2005-oss/Mochi-Mochi" target="_blank" rel="noreferrer" aria-label="Open Mochi Mochi">↗</a>
                     </article>
 
                     <article class="project-row reveal">
-                        <div class="project-index">P.005</div>
-                        <div class="project-copy">
-                            <div class="project-meta">
-                                <span>LEARNING / PYTHON</span>
-                                <span class="project-status muted"><i></i> EVOLVING</span>
-                            </div>
+                        <div class="project-index">P.006</div><div class="project-copy">
+                            <div class="project-meta"><span>LEARNING / PYTHON</span><span class="project-status muted"><i></i> EVOLVING</span></div>
                             <h3>UCAMP Projects</h3>
-                            <p data-es="Repositorio de ejercicios y proyectos de formación que documenta mi progreso con Python, lógica, validación de datos, archivos, APIs y desarrollo incremental."
-                               data-en="Training repository documenting my progress with Python, logic, data validation, files, APIs, and incremental development.">
-                                Repositorio de ejercicios y proyectos de formación que documenta mi progreso con Python, lógica, validación de datos, archivos, APIs y desarrollo incremental.
-                            </p>
+                            <p data-es="Repositorio de formación que documenta mi progreso con Python, lógica, validación de datos, archivos, APIs y desarrollo incremental." data-en="Training repository documenting my progress with Python, logic, data validation, files, APIs, and incremental development.">Repositorio de formación que documenta mi progreso con Python, lógica, validación de datos, archivos, APIs y desarrollo incremental.</p>
                             <div class="project-tags"><span>Python</span><span>Git</span><span>APIs</span><span>Learning</span></div>
-                        </div>
-                        <a class="project-link" href="https://github.com/alpizars2005-oss/Ucamp-Projects" target="_blank" rel="noreferrer" aria-label="Open UCAMP Projects on GitHub">↗</a>
+                        </div><a class="project-link" href="https://github.com/alpizars2005-oss/Ucamp-Projects" target="_blank" rel="noreferrer" aria-label="Open UCAMP Projects">↗</a>
                     </article>
                 </div>
             </section>
 
-            <!-- PROCESS -->
-            <section class="content-section section-frame process-section">
+            <section class="content-section section-frame" id="homelab">
                 <div class="section-heading reveal">
-                    <p class="sequence">03 / ENGINEERING LOOP</p>
-                    <h2 data-es="Analizar. Construir. Mejorar." data-en="Analyze. Build. Improve.">Analizar. Construir. Mejorar.</h2>
+                    <p class="sequence">03 / HOMELAB OPERATIONS</p>
+                    <h2 data-es="Infraestructura que puedo tocar, romper y recuperar." data-en="Infrastructure I can touch, break, and recover.">Infraestructura que puedo tocar, romper y recuperar.</h2>
+                    <p class="section-intro" data-es="AfeLab separa claramente lo que está corriendo hoy de lo que está en roadmap. No presento servicios planeados como si ya estuvieran desplegados." data-en="AfeLab clearly separates what is running today from the roadmap. Planned services are not presented as already deployed.">AfeLab separa claramente lo que está corriendo hoy de lo que está en roadmap. No presento servicios planeados como si ya estuvieran desplegados.</p>
                 </div>
+                <div class="capability-grid">
+                    <article class="capability-card reveal accent-card"><span class="capability-code">RUN.01</span><h3>Proxmox + Linux</h3><div class="capability-list"><span data-es="Host de virtualización en operación" data-en="Virtualization host in operation">Host de virtualización en operación</span><span>Unprivileged services</span><span>Tailscale administration</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">RUN.02</span><h3>Jellyfin</h3><div class="capability-list"><span data-es="Producción" data-en="Production">Producción</span><span>Media read-only</span><span data-es="Servicio aislado" data-en="Isolated service">Servicio aislado</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">RUN.03</span><h3>AfeNAS / SMB</h3><div class="capability-list"><span data-es="Producción" data-en="Production">Producción</span><span>SMB storage</span><span>Media read/write</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">RUN.04</span><h3>Alpizers Service</h3><div class="capability-list"><span data-es="Producción" data-en="Production">Producción</span><span>Media read/write</span><span data-es="Integración con almacenamiento" data-en="Storage integration">Integración con almacenamiento</span></div></article>
+                    <article class="capability-card reveal accent-card"><span class="capability-code">NEXT.01</span><h3 data-es="Observabilidad" data-en="Observability">Observabilidad</h3><div class="capability-list"><span>Uptime Kuma / Homepage</span><span>Prometheus / Grafana</span><span data-es="Planeado / capacity-gated" data-en="Planned / capacity-gated">Planeado / capacity-gated</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">NEXT.02</span><h3 data-es="Servicios siguientes" data-en="Next services">Servicios siguientes</h3><div class="capability-list"><span>Syncthing</span><span>AdGuard</span><span>Home Assistant / Immich / game servers</span><span data-es="Roadmap, no producción todavía" data-en="Roadmap, not production yet">Roadmap, no producción todavía</span></div></article>
+                </div>
+            </section>
 
+            <section class="content-section section-frame process-section">
+                <div class="section-heading reveal"><p class="sequence">04 / ENGINEERING LOOP</p><h2 data-es="Analizar. Construir. Validar. Operar." data-en="Analyze. Build. Validate. Operate.">Analizar. Construir. Validar. Operar.</h2></div>
                 <div class="process-track reveal">
                     <div class="process-step"><span>01</span><strong data-es="IDENTIFICAR" data-en="IDENTIFY">IDENTIFICAR</strong><small data-es="Problema y restricciones" data-en="Problem and constraints">Problema y restricciones</small></div>
                     <div class="process-step"><span>02</span><strong data-es="DISEÑAR" data-en="DESIGN">DISEÑAR</strong><small data-es="Flujo y arquitectura" data-en="Flow and architecture">Flujo y arquitectura</small></div>
-                    <div class="process-step"><span>03</span><strong data-es="CONSTRUIR" data-en="BUILD">CONSTRUIR</strong><small data-es="Código y herramientas" data-en="Code and tools">Código y herramientas</small></div>
-                    <div class="process-step"><span>04</span><strong data-es="VALIDAR" data-en="VALIDATE">VALIDAR</strong><small data-es="Pruebas y casos límite" data-en="Tests and edge cases">Pruebas y casos límite</small></div>
-                    <div class="process-step"><span>05</span><strong data-es="ITERAR" data-en="ITERATE">ITERAR</strong><small data-es="Medir y refinar" data-en="Measure and refine">Medir y refinar</small></div>
+                    <div class="process-step"><span>03</span><strong data-es="CONSTRUIR" data-en="BUILD">CONSTRUIR</strong><small data-es="Código e infraestructura" data-en="Code and infrastructure">Código e infraestructura</small></div>
+                    <div class="process-step"><span>04</span><strong data-es="VALIDAR" data-en="VALIDATE">VALIDAR</strong><small data-es="Pruebas y evidencia" data-en="Tests and evidence">Pruebas y evidencia</small></div>
+                    <div class="process-step"><span>05</span><strong data-es="OPERAR" data-en="OPERATE">OPERAR</strong><small data-es="Observar y recuperar" data-en="Observe and recover">Observar y recuperar</small></div>
                 </div>
             </section>
 
-            <!-- STACK -->
             <section class="content-section section-frame" id="stack">
-                <div class="section-heading reveal">
-                    <p class="sequence">04 / CAPABILITIES</p>
-                    <h2 data-es="Stack en movimiento." data-en="A stack in motion.">Stack en movimiento.</h2>
-                </div>
-
+                <div class="section-heading reveal"><p class="sequence">05 / CAPABILITIES</p><h2 data-es="Stack en movimiento." data-en="A stack in motion.">Stack en movimiento.</h2></div>
                 <div class="capability-grid">
-                    <article class="capability-card reveal">
-                        <span class="capability-code">DEV</span>
-                        <h3 data-es="Desarrollo" data-en="Development">Desarrollo</h3>
-                        <div class="capability-list"><span>Python</span><span>JavaScript</span><span>HTML / CSS</span><span>Git / GitHub</span></div>
-                    </article>
-                    <article class="capability-card reveal">
-                        <span class="capability-code">SYS</span>
-                        <h3 data-es="Sistemas" data-en="Systems">Sistemas</h3>
-                        <div class="capability-list"><span>Linux</span><span>Windows</span><span>SQLite</span><span>CLI</span></div>
-                    </article>
-                    <article class="capability-card reveal">
-                        <span class="capability-code">AUT</span>
-                        <h3 data-es="Automatización" data-en="Automation">Automatización</h3>
-                        <div class="capability-list"><span>Python</span><span>AutoHotkey v2</span><span>PowerShell</span><span>JSON</span></div>
-                    </article>
-                    <article class="capability-card reveal accent-card">
-                        <span class="capability-code">SEC</span>
-                        <h3 data-es="Seguridad aplicada" data-en="Applied security">Seguridad aplicada</h3>
-                        <div class="capability-list"><span>Input validation</span><span>SHA-256</span><span>Defender</span><span>Secure updates</span></div>
-                    </article>
+                    <article class="capability-card reveal"><span class="capability-code">DEV</span><h3 data-es="Desarrollo" data-en="Development">Desarrollo</h3><div class="capability-list"><span>Python</span><span>JavaScript</span><span>HTML / CSS</span><span>Git / GitHub</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">SYS</span><h3 data-es="Sistemas e infraestructura" data-en="Systems & infrastructure">Sistemas e infraestructura</h3><div class="capability-list"><span>Linux</span><span>Windows</span><span>Proxmox</span><span>SMB / Tailscale</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">AUT</span><h3 data-es="Automatización" data-en="Automation">Automatización</h3><div class="capability-list"><span>Python</span><span>PowerShell</span><span>AutoHotkey v2</span><span>Ansible</span></div></article>
+                    <article class="capability-card reveal accent-card"><span class="capability-code">SEC</span><h3 data-es="Seguridad y QA" data-en="Security & QA">Seguridad y QA</h3><div class="capability-list"><span>Input validation</span><span>SHA-256</span><span>CI / tests</span><span>Backup / rollback thinking</span></div></article>
                 </div>
             </section>
 
-            <!-- CERTIFICATIONS -->
             <section class="content-section section-frame" id="certifications">
                 <div class="section-heading reveal">
-                    <p class="sequence">05 / CREDENTIALS</p>
-                    <h2 data-es="Aprendizaje con evidencia." data-en="Learning with evidence.">Aprendizaje con evidencia.</h2>
-                    <p class="section-intro" data-es="Certificados y formación técnica que ya completé, junto con las rutas profesionales que sigo cursando actualmente."
-                       data-en="Technical credentials I have already completed, together with the professional certificate paths I am currently pursuing.">
-                        Certificados y formación técnica que ya completé, junto con las rutas profesionales que sigo cursando actualmente.
-                    </p>
+                    <p class="sequence">06 / CREDENTIALS</p><h2 data-es="Aprendizaje con evidencia." data-en="Learning with evidence.">Aprendizaje con evidencia.</h2>
+                    <p class="section-intro" data-es="Certificados técnicos completados y rutas profesionales que sigo cursando actualmente." data-en="Completed technical credentials and professional certificate paths currently in progress.">Certificados técnicos completados y rutas profesionales que sigo cursando actualmente.</p>
                 </div>
-
                 <div class="capability-grid">
-                    <article class="capability-card reveal accent-card">
-                        <span class="capability-code">CERT.01</span>
-                        <h3>Crash Course on Python</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Jul 2026" data-en="Completed · Jul 2026">Completado · Jul 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">CERT.02</span>
-                        <h3>Using Python to Interact with the Operating System</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">CERT.03</span>
-                        <h3>Introduction to Git and GitHub</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">CERT.04</span>
-                        <h3>Foundations of Cybersecurity</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">CERT.05</span>
-                        <h3>Troubleshooting and Debugging Techniques</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal accent-card">
-                        <span class="capability-code">CERT.06</span>
-                        <h3>Introduction to Cybersecurity</h3>
-                        <div class="capability-list">
-                            <span>Cisco Networking Academy</span>
-                            <span data-es="Completado · Sep 2026" data-en="Completed · Sep 2026">Completado · Sep 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">CERT.07</span>
-                        <h3>I Validated and Operated Data – Outstanding</h3>
-                        <div class="capability-list">
-                            <span>UTEL Universidad</span>
-                            <span data-es="Credencial · 2026" data-en="Credential · 2026">Credencial · 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">CERT.08</span>
-                        <h3 data-es="Curso Propedéutico CPFIA" data-en="CPFIA Preparatory Course">Curso Propedéutico CPFIA</h3>
-                        <div class="capability-list">
-                            <span>TecNM / CPFIA</span>
-                            <span data-es="Completado · Jul 2026" data-en="Completed · Jul 2026">Completado · Jul 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal accent-card">
-                        <span class="capability-code">CERT.09</span>
-                        <h3>Configuration Management and the Cloud</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Sep 2026" data-en="Completed · Sep 2026">Completado · Sep 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal accent-card">
-                        <span class="capability-code">CERT.10</span>
-                        <h3>Play It Safe: Manage Security Risks</h3>
-                        <div class="capability-list">
-                            <span>Google / Coursera</span>
-                            <span data-es="Completado · Sep 2026" data-en="Completed · Sep 2026">Completado · Sep 2026</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">PATH.01</span>
-                        <h3>Google IT Automation with Python</h3>
-                        <div class="capability-list">
-                            <span>Professional Certificate</span>
-                            <span data-es="En progreso" data-en="In progress">En progreso</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">PATH.02</span>
-                        <h3>Google Cybersecurity</h3>
-                        <div class="capability-list">
-                            <span>Professional Certificate</span>
-                            <span data-es="En progreso" data-en="In progress">En progreso</span>
-                        </div>
-                    </article>
-
-                    <article class="capability-card reveal">
-                        <span class="capability-code">PATH.03</span>
-                        <h3 data-es="Ruta CPFIA / Cisco Networking & Cybersecurity" data-en="CPFIA / Cisco Networking & Cybersecurity Path">Ruta CPFIA / Cisco Networking & Cybersecurity</h3>
-                        <div class="capability-list">
-                            <span>INFOTEC / Cisco Networking Academy</span>
-                            <span data-es="En progreso" data-en="In progress">En progreso</span>
-                        </div>
-                    </article>
+                    <article class="capability-card reveal accent-card"><span class="capability-code">CERT.01</span><h3>Crash Course on Python</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Jul 2026" data-en="Completed · Jul 2026">Completado · Jul 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">CERT.02</span><h3>Using Python to Interact with the Operating System</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">CERT.03</span><h3>Introduction to Git and GitHub</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">CERT.04</span><h3>Foundations of Cybersecurity</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">CERT.05</span><h3>Troubleshooting and Debugging Techniques</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Ago 2026" data-en="Completed · Aug 2026">Completado · Ago 2026</span></div></article>
+                    <article class="capability-card reveal accent-card"><span class="capability-code">CERT.06</span><h3>Introduction to Cybersecurity</h3><div class="capability-list"><span>Cisco Networking Academy</span><span data-es="Completado · Sep 2026" data-en="Completed · Sep 2026">Completado · Sep 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">CERT.07</span><h3>I Validated and Operated Data – Outstanding</h3><div class="capability-list"><span>UTEL Universidad</span><span data-es="Credencial · 2026" data-en="Credential · 2026">Credencial · 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">CERT.08</span><h3 data-es="Curso Propedéutico CPFIA" data-en="CPFIA Preparatory Course">Curso Propedéutico CPFIA</h3><div class="capability-list"><span>TecNM / CPFIA</span><span data-es="Completado · Jul 2026" data-en="Completed · Jul 2026">Completado · Jul 2026</span></div></article>
+                    <article class="capability-card reveal accent-card"><span class="capability-code">CERT.09</span><h3>Configuration Management and the Cloud</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Sep 2026" data-en="Completed · Sep 2026">Completado · Sep 2026</span></div></article>
+                    <article class="capability-card reveal accent-card"><span class="capability-code">CERT.10</span><h3>Play It Safe: Manage Security Risks</h3><div class="capability-list"><span>Google / Coursera</span><span data-es="Completado · Sep 2026" data-en="Completed · Sep 2026">Completado · Sep 2026</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">PATH.01</span><h3>Google IT Automation with Python</h3><div class="capability-list"><span>Professional Certificate</span><span data-es="En progreso" data-en="In progress">En progreso</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">PATH.02</span><h3>Google Cybersecurity</h3><div class="capability-list"><span>Professional Certificate</span><span data-es="En progreso" data-en="In progress">En progreso</span></div></article>
+                    <article class="capability-card reveal"><span class="capability-code">PATH.03</span><h3 data-es="Ruta CPFIA / Cisco Networking & Cybersecurity" data-en="CPFIA / Cisco Networking & Cybersecurity Path">Ruta CPFIA / Cisco Networking & Cybersecurity</h3><div class="capability-list"><span>INFOTEC / Cisco Networking Academy</span><span data-es="En progreso" data-en="In progress">En progreso</span></div></article>
                 </div>
             </section>
 
-            <!-- CONTACT -->
             <section class="contact-section section-frame" id="contact">
-                <div class="contact-top reveal">
-                    <p class="sequence">06 / FINAL SEQUENCE</p>
-                    <div class="contact-status"><span></span><span data-es="ABIERTO A OPORTUNIDADES" data-en="OPEN TO OPPORTUNITIES">ABIERTO A OPORTUNIDADES</span></div>
-                </div>
-
-                <div class="contact-main reveal">
-                    <h2 data-es="Construyamos el siguiente sistema." data-en="Let's build the next system.">Construyamos el siguiente sistema.</h2>
-                    <p data-es="Python, Data/AI, QA, automatización, sistemas y ciberseguridad." data-en="Python, Data/AI, QA, automation, systems, and cybersecurity.">
-                        Python, Data/AI, QA, automatización, sistemas y ciberseguridad.
-                    </p>
-                </div>
-
+                <div class="contact-top reveal"><p class="sequence">07 / FINAL SEQUENCE</p><div class="contact-status"><span></span><span data-es="ABIERTO A OPORTUNIDADES" data-en="OPEN TO OPPORTUNITIES">ABIERTO A OPORTUNIDADES</span></div></div>
+                <div class="contact-main reveal"><h2 data-es="Construyamos el siguiente sistema." data-en="Let's build the next system.">Construyamos el siguiente sistema.</h2><p data-es="Python, IT, automatización, infraestructura, QA y ciberseguridad." data-en="Python, IT, automation, infrastructure, QA, and cybersecurity.">Python, IT, automatización, infraestructura, QA y ciberseguridad.</p></div>
                 <div class="contact-actions reveal">
                     <a href="mailto:alpizars2005@gmail.com"><span>Email</span><span>↗</span></a>
                     <a href="https://www.linkedin.com/in/angel-alfredo-alpizar-sanchez-6559a4278" target="_blank" rel="noreferrer"><span>LinkedIn</span><span>↗</span></a>
-                    <a href="https://github.com/alpizars2005-oss" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a>
+                    <a href="https://github.com/alpizars2005-oss" target="_blank" rel="noreferrer"><span>GitHub · alpizars2005-oss</span><span>↗</span></a>
                     <a id="downloadCvBtn" href="assets/PDFs/cv-espanol.pdf" download="Angel-Alpizar-CV-Espanol.pdf"><span data-es="Descargar CV" data-en="Download CV">Descargar CV</span><span>↓</span></a>
                 </div>
-
-                <footer class="site-footer reveal">
-                    <span>ALPIZAR // SYSTEM STATUS: ONLINE</span>
-                    <span>© <span id="currentYear"></span> ANGEL ALFREDO</span>
-                </footer>
+                <footer class="site-footer reveal"><span>ALPIZAR // SYSTEM STATUS: ONLINE</span><span>© <span id="currentYear"></span> ANGEL ALFREDO</span></footer>
             </section>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
