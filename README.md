@@ -1,61 +1,78 @@
 # Angel Alfredo | Personal Portfolio
 
-This is my bilingual personal portfolio website. I built it with HTML, CSS, and vanilla JavaScript to present current Python/software projects, Data/AI and QA work, automation, systems learning, technical credentials, and contact options.
+Bilingual systems portfolio built with HTML, CSS, and vanilla JavaScript. It presents software projects, open-source contribution work, infrastructure/homelab operations, automation, QA, cybersecurity learning, technical credentials, and contact options.
 
-The portfolio is intentionally focused on work I can already show publicly.
+The public site intentionally distinguishes **deployed/current work** from **roadmap work**. It does not present planned infrastructure as already running.
 
 ## Live Website
 
 https://alpizars2005-oss.github.io/aalfredo-dev/
+
+## Public identity
+
+GitHub: **`alpizars2005-oss`**
+
+The portfolio uses the GitHub identity consistently in public project storytelling and contact surfaces.
 
 ## Features
 
 - English and Spanish language selection
 - Responsive layout for desktop and mobile
 - Current project showcase with repository or release links
-- Product-storytelling layer with a featured build, project metadata, and engineering signals
-- Original Strategy Lab system visualization clearly labeled as a conceptual visualization, not a product screenshot
+- Featured open-source contribution story for Ultimate Macro: The New Era
+- AfeLab homelab section separating live services from roadmap services
 - Terminal-style `developer.py` profile and current-focus timeline
-- Technical stack and applied-security focus
-- Completed credentials across Python, Git/GitHub, debugging, cloud configuration, cybersecurity, and data, plus professional certificate paths in progress
-- Contact buttons plus copy-to-clipboard Discord username (`pizzaroles24`)
+- Technical stack covering development, infrastructure, automation, security, and QA
+- Completed credentials across Python, Git/GitHub, debugging, cloud configuration, cybersecurity, and data
 - CV download button that changes depending on the selected language
 - Published with GitHub Pages
 
-## Visual Storytelling Approach
-
-The site keeps its original `ALPIZAR_OS` / systems-console identity while borrowing only general UX ideas common to strong software portfolios: show a flagship build early, make projects scannable, surface engineering metadata, and explain capabilities through outcomes rather than technology names alone.
-
-The implementation in `storytelling.css` and `script.js` was written specifically for this portfolio. It does not copy third-party portfolio source code, CSS, component markup, written copy, or visual assets.
-
-The added layer remains intentionally lightweight:
-
-- no React or Next.js migration;
-- no Tailwind or component framework;
-- no package manager or build step;
-- no third-party runtime dependencies;
-- no fabricated screenshots or experience metrics.
-
-When real project screenshots are ready for public use, the featured visualization and project presentation can accept them without changing the site's architecture.
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Git
-- GitHub
-- GitHub Pages
-
 ## Projects Featured
 
-- Alpizers — Windows media hub and download manager with public releases
-- Ultimate Macro Strategy Lab — isolated experimental extension work with visual strategy editing, calibration, testing, and verified updates
-- Job Search Assistant — privacy-first bilingual job-application workspace
-- Mochi Mochi — mobile-focused web product experiment for a small food business
-- UCAMP Projects — Python and software-development learning portfolio
+### Alpizers
 
-Each project also exposes compact metadata for type, year, public/private boundary, and a representative engineering signal such as CI or tests.
+Windows media hub and download manager with persistent queueing, local-library management, HTTPS downloads, integrity verification, local Microsoft Defender scanning, and public release builds.
+
+### Ultimate Macro: The New Era
+
+Open-source contribution to the official Ultimate Macro project. Public upstream work by `alpizars2005-oss` includes merged changes covering runtime hardening, placement-failure classification, watchdog lifecycle handling, updater and package verification, automated regression contracts, QA, and release/repository organization.
+
+The portfolio links to the official upstream repository rather than presenting the project as solely owned by this account. Darksen remains credited as the original creator.
+
+### AfeLab Homelab
+
+Private infrastructure project centered on Proxmox and Linux services.
+
+**Currently running:**
+
+- Jellyfin — production, unprivileged, media read-only
+- Alpizers service — production, unprivileged, media read/write
+- AfeNAS — production, unprivileged, SMB, media read/write
+- Private administration via Tailscale
+
+The private AfeLab source-of-truth repository documents security boundaries, networking, backup/disaster-recovery planning, storage/capacity, runbooks, validation tooling, and an Ansible automation path.
+
+**Roadmap / not presented as deployed:**
+
+- Syncthing after backup/permission gates
+- AdGuard client trial, with wider DNS changes deferred
+- Uptime Kuma / Homepage
+- Prometheus / Grafana when capacity permits
+- AfeWeb
+- Home Assistant OS
+- Immich, additional game servers, and other admitted workloads
+
+### Job Search Assistant
+
+Privacy-first bilingual workspace for evaluating job postings, tracking applications, detecting risk signals, and exporting application data.
+
+### Mochi Mochi
+
+Mobile-focused web product experiment for a small food business.
+
+### UCAMP Projects
+
+Python/software-development learning repository documenting incremental projects and practice.
 
 ## Credentials Featured
 
@@ -82,16 +99,16 @@ In progress:
 
 The repository has a dependency-free portfolio contract checker plus JavaScript syntax validation in GitHub Actions.
 
-The checks protect the pieces that are easiest to break during content updates:
+The checks protect:
 
-- required section and JavaScript IDs remain present;
-- navigation anchors point to real sections;
-- local CSS/JavaScript/CV references exist in the repository;
-- every static translatable element keeps `data-es` and `data-en` together;
-- the storytelling stylesheet and its required runtime hooks remain present;
-- the Discord copy action remains bound to the published username;
-- the conceptual visual keeps its explicit `not a screenshot` disclosure;
-- `script.js` remains syntactically valid.
+- required section and JavaScript IDs;
+- navigation anchors and local assets;
+- bilingual `data-es` / `data-en` pairs;
+- the storytelling stylesheet and required runtime hooks;
+- the `alpizars2005-oss` public identity;
+- removal of stale Strategy Lab / old public alias branding from the portfolio surface;
+- the conceptual-visual `not a screenshot` disclosure;
+- JavaScript syntax.
 
 Run the same checks locally:
 
@@ -100,32 +117,8 @@ python scripts/check_site.py
 node --check script.js
 ```
 
-The CI workflow uses read-only repository permissions and immutable Action commit references.
+## Portfolio content policy
 
-## What I Practiced
+Claims should be supportable by a public repository/release, merged upstream work, a documented private project, or a confirmed credential. Planned homelab services stay explicitly labeled as roadmap work until they are deployed and validated.
 
-- Semantic HTML structure
-- Responsive CSS layout
-- DOM manipulation with vanilla JavaScript
-- Progressive product storytelling without adding a framework
-- Language switching using `data-es` / `data-en` attributes
-- Clipboard UX with a fallback path and accessible live feedback
-- File downloads based on the selected language
-- Repository organization and GitHub Pages publishing
-- Presenting private-development/public-release boundaries clearly
-- Keeping completed credentials separate from in-progress learning paths
-- Static contract testing for a zero-build website
-
-## Current Content Policy
-
-The portfolio should only claim work or credentials that can be supported by completed projects, public repositories/releases, or confirmed course completion. In-progress programs are labeled explicitly and are not presented as completed certifications.
-
-Conceptual visuals must be presented as conceptual visuals. Product screenshots should only be added when they are real, owned/authorized, and ready for public sharing.
-
-## Future Improvements
-
-- Add credential verification links or certificate files when they are ready for public sharing
-- Replace or complement conceptual project visuals with real screenshots when suitable assets are available
-- Improve accessibility details and keyboard/navigation polish
-- Keep project summaries synchronized with major releases
-- Add infrastructure work only after it has stable documentation
+This keeps the portfolio useful for recruiters without creating claims that would be difficult to defend in an interview.
