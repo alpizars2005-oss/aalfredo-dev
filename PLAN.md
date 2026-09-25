@@ -184,3 +184,55 @@ Increase product clarity and recruiter scanability while preserving the portfoli
 ## Risk / rollback
 
 Low to moderate. The visible additions are injected by the existing vanilla JavaScript runtime and styled by one isolated stylesheet. Reverting `3383e70` removes the new runtime layer; reverting `7af2a95` / `3f50f9f` removes its styles. Documentation and checker commits can be reverted independently.
+
+---
+
+# Evidence-first portfolio pass — 2026-09-25
+
+## Goal
+
+Reduce presentation patterns that can make the portfolio feel AI-generated or template-driven while keeping the site's technical identity, bilingual support, accessibility, zero-dependency runtime, and verifiable project claims.
+
+The redesign should make the work easier to defend in an interview: real project scope and evidence first, decoration second.
+
+## Audit findings
+
+- The underlying repository is not "vibe coded": it already has CI, a dependency-free contract checker, reduced-motion support, documented constraints, and explicit claim boundaries.
+- The visible presentation is more vulnerable to that impression because it stacks several common generated-portfolio motifs at once: a fake OS boot screen, simulated terminal commands, "SYSTEM / ONLINE" status copy, cursor glow, conceptual dashboard graphics, developer.py, synthetic metrics, and database-style labels.
+- The language boot screen also adds friction before a recruiter can see the actual work.
+- Project descriptions are supportable, but evidence should be surfaced directly in the project cards instead of being hidden behind decorative storytelling.
+
+## Atomic commit plan
+
+1. **Document evidence-first portfolio pass**
+   - Record the audit, scope, constraints, validation plan, and rollback path before implementation.
+
+2. **Simplify portfolio around verifiable work**
+   - Remove the boot/interstitial experience and open directly into the portfolio.
+   - Keep bilingual behavior through browser/stored-language detection plus the existing language toggle.
+   - Remove simulated terminal/OS presentation, cursor-follow effects, synthetic metrics, and the conceptual visualization layer.
+   - Preserve a restrained dark technical visual identity using typography, spacing, borders, and small monospace metadata rather than fake system UI.
+   - Add concise evidence lines to project cards so public proof, upstream work, private operational documentation, or learning scope is explicit.
+   - Remove the redundant generic engineering-loop section.
+   - Keep responsive behavior, keyboard navigation, CV switching, and reduced-motion support.
+
+3. **Replace storytelling contracts with authenticity guardrails**
+   - Remove the unused storytelling stylesheet and runtime injection code.
+   - Update the static checker to protect required structure, bilingual pairs, local assets, public identity, and selected anti-gimmick presentation tokens.
+   - Keep JavaScript syntax validation in CI.
+   - Update agent guidance to prefer real evidence over simulated terminal/dashboard decoration.
+
+4. **Document the evidence-first design**
+   - Update README features and verification notes to match the simplified runtime.
+   - Record the rationale and local verification commands.
+
+## Validation
+
+- python scripts/check_site.py
+- node --check script.js
+- GitHub Actions Portfolio checks on the pull request.
+- Manual checks: initial page load, ES/EN toggle, mobile navigation, CV language switching, project links, reduced-motion behavior, and responsive layouts.
+
+## Risk / rollback
+
+Low to moderate. The site remains static HTML/CSS/vanilla JavaScript and adds no dependencies. The change removes runtime-injected decorative sections, so rollback is a normal revert of the implementation commit if the simplified presentation is not preferred.
