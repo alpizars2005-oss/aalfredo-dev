@@ -1,138 +1,67 @@
-# Angel Alfredo | Personal Portfolio
+# Angel Alfredo — portfolio
 
-Bilingual systems portfolio built with HTML, CSS, and vanilla JavaScript. It presents software projects, open-source contribution work, infrastructure/homelab operations, automation, QA, cybersecurity learning, technical credentials, and contact options.
+This is where I show the software I build, the open-source work I contribute to, and the infrastructure I use to learn. I keep it in HTML, CSS and plain JavaScript because a static portfolio does not need an application framework or a backend.
 
-The public site follows an **evidence-first** rule: deployed/current work is separated from roadmap work, and project cards point to public code, releases, merged upstream work, or clearly labeled private operational documentation.
+**Website:** https://alpizars2005-oss.github.io/aalfredo-dev/
 
-## Live Website
+The public display name is **Angel Alfredo**. My GitHub account remains `alpizars2005-oss`. The linked CV files and professional profiles are separate documents; using a shorter display name does not make this site anonymous.
 
-https://alpizars2005-oss.github.io/aalfredo-dev/
+## What is here
 
-## Public identity
+- **Alpizers:** my Windows media/download application. Source development is private; the site links to the public release channel.
+- **Ultimate Macro: The New Era:** my contributions to a community project, with a link to merged upstream pull requests. Darksen remains credited as its original creator.
+- **AfeLab / PizzaLab:** my private Proxmox/Linux homelab. The portfolio separates documented services from future work. It is a project description, not a live health dashboard.
+- **Job Search Assistant:** a local Python workspace for reviewing vacancies and tracking applications.
+- **Mochi Mochi:** a small business web project.
+- **UCAMP Projects:** my coursework and learning history, kept separate from professional experience.
 
-GitHub: **`alpizars2005-oss`**
+The [credentials section](https://alpizars2005-oss.github.io/aalfredo-dev/#certifications) distinguishes completed courses from certificate paths still in progress. The site does not present my degree as completed.
 
-The portfolio uses the GitHub identity consistently in public project storytelling and contact surfaces.
+## Run it locally
 
-## Design approach
+From the repository root:
 
-The portfolio intentionally stays lightweight and direct:
+```bash
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-- no framework or build step;
-- no runtime dependencies;
-- no fake OS boot sequence or simulated terminal session;
-- no synthetic portfolio metrics;
-- no conceptual dashboard presented as product evidence;
-- restrained dark technical styling using typography, spacing, borders, and monospace metadata;
-- project evidence surfaced next to the claim it supports.
+Open `http://127.0.0.1:8000`. There is no build step.
 
-The goal is to make the portfolio easy to scan and easy to defend in an interview.
+## Browser behavior
 
-## Features
+The page is readable before JavaScript runs. JavaScript adds language selection, CV-link switching and collapsible mobile navigation; it does not unlock the main content.
 
-- Automatic Spanish/English selection from the saved preference or browser language
-- One-click ES/EN language switch
-- Responsive layout for desktop and mobile
-- Evidence-first project showcase with repository, release, or upstream contribution links
-- AfeLab homelab section separating live services from roadmap services
-- Technical stack covering development, infrastructure, automation, security, and QA
-- Completed credentials across Python, Git/GitHub, debugging, cloud configuration, cybersecurity, and data
-- CV download button that changes depending on the selected language
-- Reduced-motion support
-- Published with GitHub Pages
+A saved ES/EN preference takes priority over the browser language. When browser storage is blocked or full, the language can still change for the current visit. Without JavaScript, the Spanish page, navigation and Spanish CV link remain usable. Reduced-motion preferences are respected.
 
-## Projects Featured
+Project descriptions and evidence links are written in the HTML rather than generated from a second content database. Changes should remain paired in Spanish and English.
 
-### Alpizers
+## Checks
 
-Windows media hub and download manager with persistent queueing, local-library management, HTTPS downloads, integrity verification, local Microsoft Defender scanning, and public release builds.
-
-Evidence surfaced in the portfolio: the public release repository.
-
-### Ultimate Macro: The New Era
-
-Open-source contribution to the official Ultimate Macro project. Public upstream work by `alpizars2005-oss` includes merged changes covering runtime hardening, placement-failure classification, watchdog lifecycle handling, updater and package verification, automated regression contracts, QA, and release/repository organization.
-
-The portfolio links to the official upstream repository and a GitHub query for merged pull requests by this account rather than presenting the project as solely owned. Darksen remains credited as the original creator.
-
-### AfeLab Homelab
-
-Private infrastructure project centered on Proxmox and Linux services.
-
-**Currently presented as running:**
-
-- Jellyfin — production, unprivileged, media read-only
-- Alpizers service — production, unprivileged, media read/write
-- AfeNAS — production, unprivileged, SMB, media read/write
-- Private administration via Tailscale
-
-The private source-of-truth repository documents security boundaries, networking, backup/disaster-recovery planning, storage/capacity, runbooks, validation tooling, and an Ansible automation path.
-
-**Roadmap / not presented as deployed:**
-
-- Syncthing after backup/permission gates
-- AdGuard client trial, with wider DNS changes deferred
-- Uptime Kuma / Homepage
-- Prometheus / Grafana when capacity permits
-- Home Assistant / Immich / additional admitted workloads
-
-### Job Search Assistant
-
-Privacy-first bilingual workspace for evaluating job postings, tracking applications, detecting risk signals, and exporting application data.
-
-### Mochi Mochi
-
-Mobile-focused web product experiment for a small food business.
-
-### UCAMP Projects
-
-Python/software-development learning repository documenting incremental projects and practice.
-
-## Credentials Featured
-
-Completed:
-
-- Crash Course on Python — Google / Coursera
-- Using Python to Interact with the Operating System — Google / Coursera
-- Introduction to Git and GitHub — Google / Coursera
-- Foundations of Cybersecurity — Google / Coursera
-- Troubleshooting and Debugging Techniques — Google / Coursera
-- Configuration Management and the Cloud — Google / Coursera
-- Play It Safe: Manage Security Risks — Google / Coursera
-- Introduction to Cybersecurity — Cisco Networking Academy
-- I Validated and Operated Data – Outstanding — UTEL Universidad
-- CPFIA Preparatory Course — TecNM / CPFIA
-
-In progress:
-
-- Google IT Automation with Python Professional Certificate
-- Google Cybersecurity Professional Certificate
-- CPFIA / Cisco Networking & Cybersecurity training path
-
-## Automated Verification
-
-The repository has a dependency-free portfolio contract checker plus JavaScript syntax validation in GitHub Actions.
-
-The checks protect:
-
-- required section and JavaScript IDs;
-- navigation anchors and local assets;
-- bilingual `data-es` / `data-en` pairs;
-- the `alpizars2005-oss` public identity;
-- evidence markers in project cards;
-- removal of stale Strategy Lab / old public alias branding;
-- removal of presentation motifs that this design intentionally retired;
-- JavaScript syntax.
-
-Run the same checks locally:
+The existing dependency-free structure check and JavaScript syntax check remain available:
 
 ```bash
 python scripts/check_site.py
 node --check script.js
 ```
 
-## Portfolio content policy
+Browser regressions use Playwright as a **test-only** dependency:
 
-Claims should be supportable by a public repository/release, merged upstream work, a documented private project, or a confirmed credential. Planned homelab services stay explicitly labeled as roadmap work until they are deployed and validated.
+```bash
+python -m pip install -r requirements-test.txt
+python -m playwright install chromium
+python -m unittest discover -s tests -v
+```
 
-This keeps the portfolio useful for recruiters without creating claims that would be difficult to defend in an interview.
+On Linux, the browser may need system libraries; Playwright documents installation through `python -m playwright install --with-deps chromium`. Review system changes before running that command locally.
+
+The suite starts a temporary loopback HTTP server and blocks external requests. It checks normal and degraded startup, storage errors, language/CV switching, mobile keyboard behavior, reduced motion, unavailable observers, screen widths, evidence links and the public display name. It does not submit forms, follow contact links, operate the homelab or validate the contents of the CV PDFs.
+
+For restricted test environments, `PORTFOLIO_TEST_INLINE=1` explicitly selects an in-memory rendering mode with controlled storage. That mode is useful for UI regressions, but is **not** a test of HTTP delivery, deployment or native storage persistence across navigations. `PLAYWRIGHT_CHROMIUM_EXECUTABLE` can select an installed Chromium executable. CI uses the normal HTTP mode and the pinned Playwright version.
+
+## Keeping the claims honest
+
+I prefer a specific explanation and a useful link over a badge or a simulated dashboard. A public repository, release or merged contribution can support a claim; private work must be labeled as private. A roadmap item is not a shipped feature, and a passing syntax check is not a live functional test.
+
+The current homelab text still needs reconciliation with the latest operational project before it is expanded. This browser/name fix does not mark additional services as deployed or claim that PizzaLab PE is already built.
+
+See [the audit plan](docs/audit-20260925/PLAN.md) and [CHANGELOG.md](CHANGELOG.md). Earlier implementation history remains in the root [PLAN.md](PLAN.md).

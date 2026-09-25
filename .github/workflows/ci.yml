@@ -12,6 +12,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -26,3 +27,12 @@ jobs:
 
       - name: Validate JavaScript syntax
         run: node --check script.js
+
+      - name: Install browser test dependency
+        run: python -m pip install -r requirements-test.txt
+
+      - name: Install test browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run browser regressions over local HTTP
+        run: python -m unittest discover -s tests -v

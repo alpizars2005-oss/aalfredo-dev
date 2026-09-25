@@ -1,0 +1,2 @@
+# Browser regression tests only; the deployed site has no runtime dependencies.
+playwright==1.63.0
