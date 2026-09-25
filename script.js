@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (language === "en") {
             downloadCvBtn.href = "assets/PDFs/cv-english.pdf";
-            downloadCvBtn.download = "Angel-Alpizar-CV-English.pdf";
+            downloadCvBtn.download = "Angel-Alfredo-CV-English.pdf";
         } else {
             downloadCvBtn.href = "assets/PDFs/cv-espanol.pdf";
-            downloadCvBtn.download = "Angel-Alpizar-CV-Espanol.pdf";
+            downloadCvBtn.download = "Angel-Alfredo-CV-Espanol.pdf";
         }
     }
 
@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (language === "en") {
             document.title = "Angel Alfredo | Systems Portfolio";
             if (description) {
-                description.content = "Angel Alfredo Alpizar portfolio: Python, automation, infrastructure, Linux, QA, and cybersecurity.";
+                description.content = "Angel Alfredo portfolio: Python, automation, infrastructure, Linux, QA, and cybersecurity.";
             }
         } else {
             document.title = "Angel Alfredo | Portfolio de Sistemas";
             if (description) {
-                description.content = "Portfolio de Angel Alfredo Alpizar: Python, automatización, infraestructura, Linux, QA y ciberseguridad.";
+                description.content = "Portfolio de Angel Alfredo: Python, automatización, infraestructura, Linux, QA y ciberseguridad.";
             }
         }
     }
