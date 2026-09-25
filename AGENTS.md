@@ -8,7 +8,8 @@ This is a static portfolio. Favor accessibility, performance, correctness, and s
 2. Verify browser APIs against current official documentation when changing frontend behavior. Context7 may assist with current docs.
 3. Keep dependencies at zero unless there is a concrete maintenance or testing benefit.
 4. Preserve semantic HTML, keyboard usability, reduced-motion behavior, responsive layouts, and fast loading.
-5. Run the existing site checker after changes.
+5. Prefer real evidence, repository links, specific project scope, and real screenshots when available over simulated terminals, synthetic metrics, fake system status, or decorative dashboards.
+6. Run the existing site checker after changes.
 7. For meaningful browser interactions, add end-to-end coverage with Playwright when it catches behavior that static checks cannot.
 8. Never expose private contact data, tokens, analytics secrets, or machine-specific paths.
 
