@@ -5,11 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
     const navAnchors = document.querySelectorAll(".nav-links a[href^='#']");
-    const revealElements = document.querySelectorAll(".reveal");
     const observedSections = document.querySelectorAll("section[id]");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const storedLanguage = localStorage.getItem("aalfredo-language");
+    // A browser can deny storage without disabling the rest of the portfolio.
+    let storedLanguage = null;
+    try {
+        storedLanguage = window.localStorage.getItem("aalfredo-language");
+    } catch {
+        // Use the browser language for this visit; do not require persistence.
+    }
     const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
     let currentLanguage = storedLanguage === "es" || storedLanguage === "en" ? storedLanguage : browserLanguage;
 
@@ -70,7 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
         updateMetadata(language);
         updateLanguageControl(language);
         document.documentElement.lang = language;
-        localStorage.setItem("aalfredo-language", language);
+        try {
+            window.localStorage.setItem("aalfredo-language", language);
+        } catch {
+            // The language still changes when storage is unavailable or full.
+        }
     }
 
     translatePage(currentLanguage);
@@ -91,21 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuToggle.setAttribute("aria-expanded", "false");
             }
         });
-    }
-
-    if (reducedMotion || !("IntersectionObserver" in window)) {
-        revealElements.forEach((element) => element.classList.add("visible"));
-    } else {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12, rootMargin: "0px 0px -7% 0px" });
-
-        revealElements.forEach((element) => revealObserver.observe(element));
+        // Hide the small-screen menu only after its controls are connected.
+        menuToggle.closest("header")?.classList.add("nav-ready");
     }
 
     if ("IntersectionObserver" in window) {
@@ -127,8 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && navLinks && menuToggle) {
+            const wasOpen = navLinks.classList.contains("open");
             navLinks.classList.remove("open");
             menuToggle.setAttribute("aria-expanded", "false");
+            if (wasOpen) menuToggle.focus();
         }
     });
 });
