@@ -7,10 +7,8 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
 SCRIPT = ROOT / "script.js"
-STORYTELLING_STYLES = ROOT / "storytelling.css"
 
 REQUIRED_IDS = {
-    "languageScreen",
     "portfolio",
     "navLinks",
     "profile",
@@ -23,17 +21,22 @@ REQUIRED_IDS = {
     "currentYear",
 }
 
-REQUIRED_STORYTELLING_TOKENS = {
-    'storytellingStylesheet.href = "storytelling.css"',
-    'id="storyMetrics"',
-    "Ultimate Macro: The New Era",
+REQUIRED_PUBLIC_TOKENS = {
     "alpizars2005-oss",
-    "SYSTEM VISUALIZATION · NOT A SCREENSHOT",
+    "project-evidence",
+    "Ultimate Macro: The New Era",
+    "Merged upstream PRs",
 }
 
 FORBIDDEN_PUBLIC_TOKENS = {
     "pizzaroles24",
     "Ultimate Macro Strategy Lab",
+    "ALPIZAR_OS",
+    "SYSTEM / ONLINE",
+    "SISTEMA / EN LÍNEA",
+    "./build_next.sh",
+    "developer.py",
+    "SYSTEM VISUALIZATION · NOT A SCREENSHOT",
 }
 
 
@@ -64,9 +67,11 @@ class PortfolioParser(HTMLParser):
         ref = values.get("src") if tag == "script" else href if tag in {"a", "link"} else None
         if not ref or ref.startswith(("#", "mailto:", "tel:")):
             return
+
         parsed = urlparse(ref)
         if parsed.scheme in {"http", "https"}:
             return
+
         self.local_refs.add(ref.split("?", 1)[0].lstrip("./"))
 
 
@@ -88,24 +93,22 @@ def main() -> None:
         errors.append(f"Navigation points to missing ids: {sorted(dangling_anchors)}")
     if missing_files:
         errors.append(f"Missing local assets: {missing_files}")
+
     errors.extend(parser.translation_errors)
 
-    if not STORYTELLING_STYLES.is_file():
-        errors.append("Missing storytelling.css")
-
-    missing_storytelling_tokens = sorted(
-        token for token in REQUIRED_STORYTELLING_TOKENS if token not in script_text
-    )
-    if missing_storytelling_tokens:
-        errors.append(
-            "Storytelling module contract missing tokens: "
-            f"{missing_storytelling_tokens}"
-        )
-
     combined_public_text = index_text + "\n" + script_text
-    forbidden_hits = sorted(token for token in FORBIDDEN_PUBLIC_TOKENS if token in combined_public_text)
+
+    missing_public_tokens = sorted(
+        token for token in REQUIRED_PUBLIC_TOKENS if token not in combined_public_text
+    )
+    if missing_public_tokens:
+        errors.append(f"Required public evidence tokens missing: {missing_public_tokens}")
+
+    forbidden_hits = sorted(
+        token for token in FORBIDDEN_PUBLIC_TOKENS if token in combined_public_text
+    )
     if forbidden_hits:
-        errors.append(f"Stale public branding tokens remain: {forbidden_hits}")
+        errors.append(f"Presentation/stale-branding tokens remain: {forbidden_hits}")
 
     if errors:
         raise SystemExit("\n".join(errors))
@@ -113,7 +116,7 @@ def main() -> None:
     print(
         f"Portfolio contract OK: {len(parser.ids)} ids, "
         f"{len(parser.anchor_targets)} local anchors, {len(parser.local_refs)} local files, "
-        f"{len(REQUIRED_STORYTELLING_TOKENS)} storytelling hooks."
+        f"{len(REQUIRED_PUBLIC_TOKENS)} evidence tokens."
     )
 
 

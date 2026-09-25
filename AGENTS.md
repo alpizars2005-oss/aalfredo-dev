@@ -9,8 +9,8 @@ This is a static portfolio. Favor accessibility, performance, correctness, and s
 3. Keep dependencies at zero unless there is a concrete maintenance or testing benefit.
 4. Preserve semantic HTML, keyboard usability, reduced-motion behavior, responsive layouts, and fast loading.
 5. Run the existing site checker after changes.
-6. For meaningful browser interactions, add end-to-end coverage with Playwright when it catches behavior that static checks cannot.
-7. Never expose private contact data, tokens, analytics secrets, or machine-specific paths.
+7. For meaningful browser interactions, add end-to-end coverage with Playwright when it catches behavior that static checks cannot.
+8. Never expose private contact data, tokens, analytics secrets, or machine-specific paths.
 
 ## Review roles
 
