@@ -101,8 +101,8 @@ get(){throw new DOMException('Storage disabled','SecurityError')}});"""
 
     def assert_content_readable(self, page) -> None:
         self.assertEqual(page.locator('.hero-main').evaluate('(e)=>getComputedStyle(e).opacity'), '1')
-        self.assertEqual(page.locator('.project-row').count(), 6)
-        self.assertEqual(page.locator('#certifications article').count(), 13)
+        self.assertEqual(page.locator('.project-row').count(), 7)
+        self.assertEqual(page.locator('#certifications article').count(), 26)
 
     def test_without_javascript_content_and_mobile_links_remain_available(self):
         page, errors = self.page(width=390, javascript=False)
@@ -177,10 +177,25 @@ get(){throw new DOMException('Storage disabled','SecurityError')}});"""
 
     def test_project_evidence_links_and_credits_are_preserved(self):
         page, errors = self.page()
-        self.assertEqual(page.locator('.project-evidence').count(), 6)
-        self.assertEqual(page.locator('.project-evidence a').count(), 5)
+        self.assertEqual(page.locator('.project-evidence').count(), 7)
+        self.assertEqual(page.locator('.project-evidence a').count(), 6)
         self.assertIn('Darksen', page.locator('#projects').inner_text())
         self.assertEqual(page.locator('a[href^="https://github.com/UltimateMacro/"]').count(), 2)
+        self.assertEqual(errors, [])
+
+    def test_credential_evidence_and_completion_dates_survive_translation(self):
+        page, errors = self.page()
+        credentials = page.locator('#certifications')
+        google = credentials.locator('article').filter(
+            has=page.locator('h3', has_text='Google IT Automation with Python'))
+        self.assertIn('completado · Oct 2026', google.inner_text())
+        self.assertIn('Insignia emitida · Nov 2026', google.inner_text())
+        self.assertEqual(credentials.locator('a[href^="https://www.credly.com/badges/"]').count(), 6)
+        page.locator('#changeLanguageBtn').click()
+        self.assertIn('completed · Oct 2026', google.inner_text())
+        self.assertIn('Badge issued · Nov 2026', google.inner_text())
+        self.assertEqual(credentials.locator('a', has_text='View credential').count(), 6)
+        self.assertIn('Course completed · 90 hours · Oct 2026', credentials.inner_text())
         self.assertEqual(errors, [])
 
 

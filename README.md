@@ -10,10 +10,11 @@ The public display name is **Angel Alfredo**. My GitHub account remains `alpizar
 
 - **Alpizers:** my Windows media/download application. Source development is private; the site links to the public release channel.
 - **Ultimate Macro: The New Era:** my contributions to a community project, with a link to merged upstream pull requests. Darksen remains credited as its original creator.
-- **AfeLab / PizzaLab:** my private Proxmox/Linux homelab. The portfolio separates documented services from future work. It is a project description, not a live health dashboard.
+- **PizzaLab:** my private Proxmox/Linux homelab. The portfolio separates documented services from future work. It is a project description, not a live health dashboard.
 - **Job Search Assistant:** a local Python workspace for reviewing vacancies and tracking applications.
 - **Mochi Mochi:** a small business web project.
 - **UCAMP Projects:** my coursework and learning history, kept separate from professional experience.
+- **OpenPGP coursework:** public signature-verification evidence, clearly separated from AWS deployment or production software.
 
 The [credentials section](https://alpizars2005-oss.github.io/aalfredo-dev/#certifications) distinguishes completed courses from certificate paths still in progress. The site does not present my degree as completed.
 
@@ -62,6 +63,8 @@ For restricted test environments, `PORTFOLIO_TEST_INLINE=1` explicitly selects a
 
 I prefer a specific explanation and a useful link over a badge or a simulated dashboard. A public repository, release or merged contribution can support a claim; private work must be labeled as private. A roadmap item is not a shipped feature, and a passing syntax check is not a live functional test.
 
-The current homelab text still needs reconciliation with the latest operational project before it is expanded. This browser/name fix does not mark additional services as deployed or claim that PizzaLab PE is already built.
+The homelab cards describe documented work and plans, not live availability. Private project details stay private. Job Search Assistant performs opt-in discovery and local preparation, with simulated submissions rather than automatic applications.
+
+See [the November content refresh](docs/refresh-20261110.md) for scope and verification boundaries.
 
 See [the audit plan](docs/audit-20260925/PLAN.md) and [CHANGELOG.md](CHANGELOG.md). Earlier implementation history remains in the root [PLAN.md](PLAN.md).
